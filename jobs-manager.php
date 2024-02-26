@@ -92,4 +92,4 @@ if (!class_exists('JobsManager')) {
 }
 
 
-JobsManager();
+new JobsManager();
