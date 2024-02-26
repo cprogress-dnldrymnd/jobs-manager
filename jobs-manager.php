@@ -19,7 +19,6 @@
  */
 
 
-require_once(plugin_dir_url(__FILE__) . '/includes/post-types.php');
 
 if (!class_exists('JobsManager')) {
     class JobsManager
@@ -28,6 +27,7 @@ if (!class_exists('JobsManager')) {
 
         function __construct()
         {
+            require_once(plugin_dir_url(__FILE__) . '/includes/post-types.php');
         }
 
 
