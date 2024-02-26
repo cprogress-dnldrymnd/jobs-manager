@@ -22,7 +22,7 @@
 require_once('includes/post-types.php');
 
 if (!class_exists('JobsManager')) {
-    class JobsManager
+    class JobsManager extends newPostType
     {
         var $api_key;
 
@@ -55,7 +55,6 @@ if (!class_exists('JobsManager')) {
                 $Testimonials->show_in_admin_bar = false;
                 $Testimonials->has_archive = false;
 
-                return $Testimonials;
             }
 
             function jobsmanager_plugin_activated()
