@@ -58,15 +58,12 @@ if (!class_exists('JobsManager')) {
 
             function jobsmanager_plugin_activated()
             {
-                $this->jobsmanager_setup_post_type();
                 // Clear the permalinks after the post type has been registered.
                 flush_rewrite_rules();
             }
 
             function jobsmanager_plugin_deactivate()
             {
-                // Unregister the post type, so the rules are no longer in memory.
-                unregister_post_type('jobs');
                 // Clear the permalinks to remove our post type's rules from the database.
                 flush_rewrite_rules();
             }
