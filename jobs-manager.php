@@ -57,6 +57,7 @@ if (!class_exists('JobsManager')) {
 
         function jobsmanager_plugin_activated()
         {
+            $this->jobsmanager_setup_post_type();
             // Clear the permalinks after the post type has been registered.
             flush_rewrite_rules();
         }
