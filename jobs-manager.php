@@ -33,43 +33,44 @@ if (!class_exists('JobsManager')) {
         public function initialize()
         {
 
-
+            register_activation_hook(__FILE__, array($this, 'jobsmanager_plugin_activated'));
+            register_deactivation_hook(__FILE__, 'jobsmanager_plugin_deactivate');
 
             function assets()
             {
                 wp_register_style('jobsmanager-style', plugin_dir_url(__FILE__) . 'jobsmanager-styles.css');
             }
 
+            function jobsmanager_setup_post_type()
+            {
+                //require_once('includes/post-types.php');
+                $Testimonials = new newPostType();
+                $Testimonials->name = 'Testimonials';
+                $Testimonials->singular_name = 'Testimonial';
+                $Testimonials->icon = 'dashicons-testimonial';
+                $Testimonials->supports = array('title', 'revisions');
+                $Testimonials->exclude_from_search = true;
+                $Testimonials->publicly_queryable = false;
+                $Testimonials->show_in_admin_bar = false;
+                $Testimonials->has_archive = false;
+            }
 
+            function jobsmanager_plugin_activated()
+            {
+                // Clear the permalinks after the post type has been registered.
+                flush_rewrite_rules();
+            }
+
+            function jobsmanager_plugin_deactivate()
+            {
+                // Clear the permalinks to remove our post type's rules from the database.
+                flush_rewrite_rules();
+            }
 
             add_action('wp_enqueue_scripts', array($this, 'assets'));
         }
     }
 }
 
-function jobsmanager_plugin_activated()
-{
-   
-    flush_rewrite_rules();
-}
-register_activation_hook(__FILE__, 'jobsmanager_plugin_activated');
-
-function jobsmanager_plugin_deactivate()
-{
-    flush_rewrite_rules();
-}
-register_deactivation_hook(__FILE__, 'jobsmanager_plugin_deactivate');
 
 new JobsManager();
-
-
-require_once('includes/post-types.php');
-$Testimonials = new newPostType();
-$Testimonials->name = 'Testimonials';
-$Testimonials->singular_name = 'Testimonial';
-$Testimonials->icon = 'dashicons-testimonial';
-$Testimonials->supports = array('title', 'revisions');
-$Testimonials->exclude_from_search = true;
-$Testimonials->publicly_queryable = false;
-$Testimonials->show_in_admin_bar = false;
-$Testimonials->has_archive = false;
