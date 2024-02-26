@@ -19,6 +19,7 @@
  */
 
 
+require_once(plugin_dir_url(__FILE__) . '/includes/post-types.php');
 
 if (!class_exists('JobsManager')) {
     class JobsManager
@@ -43,7 +44,6 @@ if (!class_exists('JobsManager')) {
 
             function jobsmanager_setup_post_type()
             {
-                require_once(plugin_dir_url(__FILE__) . '/includes/post-types.php');
                 $Testimonials = new newPostType();
                 $Testimonials->name = 'Testimonials';
                 $Testimonials->singular_name = 'Testimonial';
