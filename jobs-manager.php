@@ -26,7 +26,7 @@ if (!class_exists('JobsManager')) {
 
         function __construct($config)
         {
-            add_action('init', 'jobsmanager_setup_post_type');
+            add_action('init', array($this, 'jobsmanager_setup_post_type'));
             add_action('wp_enqueue_scripts', array($this, 'assets'));
         }
 
