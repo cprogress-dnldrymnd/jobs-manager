@@ -27,7 +27,7 @@ if (!class_exists('JobsManager')) {
 
         function __construct()
         {
-            require_once('/includes/post-types.php');
+            require_once('includes/post-types.php');
         }
 
 
