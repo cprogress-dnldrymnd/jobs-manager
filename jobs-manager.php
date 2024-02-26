@@ -90,3 +90,6 @@ if (!class_exists('JobsManager')) {
         }
     }
 }
+
+
+JobsManager();
