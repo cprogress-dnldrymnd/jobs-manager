@@ -29,7 +29,7 @@ if (!class_exists('JobsManager')) {
         {
             add_action('wp_enqueue_scripts', array($this, 'assets'));
             register_activation_hook(__FILE__, array($this, 'jobsmanager_plugin_activated'));
-            register_deactivation_hook(__FILE__, 'jobsmanager_plugin_deactivate');
+            register_deactivation_hook(__FILE__, array($this, 'jobsmanager_plugin_deactivate'));
         }
 
 
