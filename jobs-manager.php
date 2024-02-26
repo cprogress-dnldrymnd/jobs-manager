@@ -23,7 +23,7 @@
 if (!class_exists('JobsManager')) {
     class JobsManager
     {
-        var $api_key;
+        var  $Testimonials;
 
         function __construct()
         {
@@ -43,15 +43,15 @@ if (!class_exists('JobsManager')) {
         function jobsmanager_setup_post_type()
         {
             require_once('includes/post-types.php');
-            $Testimonials = new newPostType();
-            $Testimonials->name = 'Testimonials';
-            $Testimonials->singular_name = 'Testimonial';
-            $Testimonials->icon = 'dashicons-testimonial';
-            $Testimonials->supports = array('title', 'revisions');
-            $Testimonials->exclude_from_search = true;
-            $Testimonials->publicly_queryable = false;
-            $Testimonials->show_in_admin_bar = false;
-            $Testimonials->has_archive = false;
+            $this->Testimonials = new newPostType();
+            $this->Testimonials->name = 'Testimonials';
+            $this->Testimonials->singular_name = 'Testimonial';
+            $this->Testimonials->icon = 'dashicons-testimonial';
+            $this->Testimonials->supports = array('title', 'revisions');
+            $this->Testimonials->exclude_from_search = true;
+            $this->Testimonials->publicly_queryable = false;
+            $this->Testimonials->show_in_admin_bar = false;
+            $this->Testimonials->has_archive = false;
         }
 
 
