@@ -24,7 +24,7 @@ if (!class_exists('JobsManager')) {
     {
         var $api_key;
 
-        function __construct($config)
+        function __construct()
         {
             add_action('init', array($this, 'jobsmanager_setup_post_type'));
             add_action('wp_enqueue_scripts', array($this, 'assets'));
