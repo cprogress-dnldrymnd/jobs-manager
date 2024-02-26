@@ -49,24 +49,27 @@ if (!class_exists('JobsManager')) {
 
 function jobsmanager_plugin_activated()
 {
-    new JobsManager();
-    require_once('includes/post-types.php');
-    $Testimonials = new newPostType();
-    $Testimonials->name = 'Testimonials';
-    $Testimonials->singular_name = 'Testimonial';
-    $Testimonials->icon = 'dashicons-testimonial';
-    $Testimonials->supports = array('title', 'revisions');
-    $Testimonials->exclude_from_search = true;
-    $Testimonials->publicly_queryable = false;
-    $Testimonials->show_in_admin_bar = false;
-    $Testimonials->has_archive = false;
+   
     flush_rewrite_rules();
 }
 register_activation_hook(__FILE__, 'jobsmanager_plugin_activated');
 
 function jobsmanager_plugin_deactivate()
 {
-    // Clear the permalinks to remove our post type's rules from the database.
     flush_rewrite_rules();
 }
 register_deactivation_hook(__FILE__, 'jobsmanager_plugin_deactivate');
+
+new JobsManager();
+
+
+require_once('includes/post-types.php');
+$Testimonials = new newPostType();
+$Testimonials->name = 'Testimonials';
+$Testimonials->singular_name = 'Testimonial';
+$Testimonials->icon = 'dashicons-testimonial';
+$Testimonials->supports = array('title', 'revisions');
+$Testimonials->exclude_from_search = true;
+$Testimonials->publicly_queryable = false;
+$Testimonials->show_in_admin_bar = false;
+$Testimonials->has_archive = false;
