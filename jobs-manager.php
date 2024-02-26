@@ -28,5 +28,13 @@ if (!class_exists('JobsManager')) {
         {
             add_action('wp_enqueue_scripts', array($this, 'assets'));
         }
+
+
+
+
+        function assets()
+        {
+            wp_register_style('jobs-manager-style', plugin_dir_url(__FILE__) . 'jobs-manager-styles.css');
+        }
     }
 }
