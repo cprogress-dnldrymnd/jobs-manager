@@ -18,6 +18,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
+require_once('includes/post-types.php');
 
 if (!class_exists('JobsManager')) {
     class JobsManager
@@ -26,7 +27,6 @@ if (!class_exists('JobsManager')) {
 
         function __construct()
         {
-
             add_action('init', array($this, 'jobsmanager_setup_post_type'));
             add_action('wp_enqueue_scripts', array($this, 'assets'));
         }
