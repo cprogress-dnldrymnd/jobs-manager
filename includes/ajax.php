@@ -42,7 +42,7 @@ class Ajax
 		if ($the_query->have_posts()) {
 ?>
 			<?php if (!$offset) { ?>
-				<div class="career-wrapper">
+				<div class="job-wrapper">
 				<?php } ?>
 				<?php
 				while ($the_query->have_posts()) {

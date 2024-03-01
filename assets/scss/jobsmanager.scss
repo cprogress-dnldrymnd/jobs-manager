@@ -1,3 +1,7 @@
+:root {
+    --jobm-white-color: #fff;
+    --jobm-black-color: #000;
+}
 #jobs-main {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -93,6 +97,16 @@ select {
         svg {
             translate: transform(translateX(0));
             right: 0;
+        }
+    }
+}
+
+.job-wrapper {
+    .career-holder {
+        box-shadow: 0px 29px 35px #0000000D;
+        background-color: var(--jobm-white-color);
+        &:not(:last-child) {
+            margin-bottom: 60px;
         }
     }
 }
