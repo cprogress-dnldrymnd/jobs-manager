@@ -2,8 +2,34 @@ jQuery(document).ready(function () {
     nice_select();
     ajax_form();
     load_more_button_listener();
-    console.log('xxxx');
+    job_archive();
 });
+
+jQuery('#applyModal').on('show.bs.modal', function (e) {
+    jQuery('html').addClass('overflow-hidden');
+})
+jQuery('#applyModal').on('hide.bs.modal', function (e) {
+    jQuery('html').removeClass('overflow-hidden');
+})
+
+function job_archive() {
+    jQuery('#location').change();
+
+    jQuery(document).on("click", '.apply-button', function (event) {
+        $title = jQuery(this).attr('data-title');
+        jQuery('input[name="position"]').val($title);
+        jQuery('.modal-title span').text($title);
+    });
+
+    jQuery('.select-file').click(function (event) {
+        jQuery('input[name="CV"]').click();
+    });
+
+    jQuery('input[name="CV"]').change(function (event) {
+        jQuery('.fake-input').text(jQuery(this).val().replace(/C:\\fakepath\\/i, ''));
+        jQuery('.form-file').addClass('focused');
+    });
+}
 
 function nice_select() {
     jQuery('select.nice-select-js').niceSelect();

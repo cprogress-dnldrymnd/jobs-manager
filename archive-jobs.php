@@ -85,32 +85,3 @@ $jobs_description = $JobsManager->jobs_description();
 <?php
 get_footer();
 ?>
-
-
-<script>
-    jQuery(document).ready(function($) {
-        jQuery('#location').change();
-
-        jQuery(document).on("click", '.apply-button', function(event) {
-            $title = jQuery(this).attr('data-title');
-            jQuery('input[name="position"]').val($title);
-            jQuery('.modal-title span').text($title);
-        });
-
-        jQuery('.select-file').click(function(event) {
-            jQuery('input[name="CV"]').click();
-        });
-
-        jQuery('input[name="CV"]').change(function(event) {
-            jQuery('.fake-input').text(jQuery(this).val().replace(/C:\\fakepath\\/i, ''));
-            jQuery('.form-file').addClass('focused');
-        });
-    });
-
-    jQuery('#applyModal').on('show.bs.modal', function(e) {
-        jQuery('html').addClass('overflow-hidden');
-    })
-    jQuery('#applyModal').on('hide.bs.modal', function(e) {
-        jQuery('html').removeClass('overflow-hidden');
-    })
-</script>
