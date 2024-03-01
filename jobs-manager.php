@@ -124,7 +124,7 @@ if (!class_exists('JobsManager')) {
                 'show_in_nav_menus'          => true,
                 'show_tagcloud'              => true,
             );
-            register_taxonomy('Location', array('jobs'), $args);
+            register_taxonomy('location', array('jobs'), $args);
         }
     }
 }
