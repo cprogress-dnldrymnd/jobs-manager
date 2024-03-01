@@ -79,6 +79,9 @@ select.nice-select-js {
   background-color: var(--jobm-white-color); }
   .job-wrapper .career-holder .accordion-button:after {
     content: none; }
+  .job-wrapper .career-holder .accordion-button svg {
+    width: 20px;
+    height: 20px; }
   .job-wrapper .career-holder .accordion-button[aria-expanded="false"] .icon-inactive {
     display: none; }
   .job-wrapper .career-holder .accordion-button[aria-expanded="false"] .icon-active {

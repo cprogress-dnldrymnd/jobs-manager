@@ -115,6 +115,10 @@ select {
             &:after {
                 content: none;
             }
+            svg {
+                width: 20px;
+                height: 20px;
+            }
             &[aria-expanded="false"] {
                 .icon-inactive {
                     display: none;
