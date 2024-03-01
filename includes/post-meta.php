@@ -9,14 +9,17 @@ if (!class_exists('PostMeta')) {
 
         function jobsmanager_notice()
         {
-            global $pagenow;
-            $admin_pages = ['index.php', 'edit.php?post_type=jobs', 'plugins.php'];
-            if (in_array($pagenow, $admin_pages)) {
+            if (function_exists('carbon_get_the_post_meta')) {
+
+                global $pagenow;
+                $admin_pages = ['index.php', 'edit.php?post_type=jobs', 'plugins.php'];
+                if (in_array($pagenow, $admin_pages)) {
 ?>
-                <div class="notice notice-warning is-dismissible">
-                    <p></p>
-                </div>
+                    <div class="notice notice-warning is-dismissible">
+                        <p></p>
+                    </div>
 <?php
+                }
             }
         }
     }
