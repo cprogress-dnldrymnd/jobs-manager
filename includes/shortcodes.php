@@ -2,7 +2,6 @@
 class Shortcodes
 {
 
-
     function __construct()
     {
         add_shortcode('jobs_manager_modal_form', array($this, 'jobs_manager_modal_form'));
