@@ -28,6 +28,7 @@ Container::make('post_meta', __('Job Details'))
     ->add_tab('General Settings', array(
         Field::make('textarea', 'short_description', 'Short Description'),
         Field::make('text', 'salary', 'Salary'),
+        Field::make('image', 'image', 'Image'),
     ))
     ->add_tab('Accordion', array(
         Field::make('complex', 'accordion', 'Accordion')
