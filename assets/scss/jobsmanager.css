@@ -49,8 +49,16 @@ select.nice-select-js {
 
 @keyframes spin {
   from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 .load-more a {
   position: relative;
@@ -59,14 +67,22 @@ select.nice-select-js {
   display: inline-block;
   padding-bottom: 2px; }
   .load-more a span {
-    transform: 300ms; }
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms; }
   .load-more a svg {
     position: absolute;
     right: -21px; }
   .load-more a.loading {
     padding-right: 30px; }
     .load-more a.loading svg {
-      translate: transform(translateX(0));
+      -webkit-transform: transform(translateX(0));
+      -moz-transform: transform(translateX(0));
+      -ms-transform: transform(translateX(0));
+      -o-transform: transform(translateX(0));
+      transform: transform(translateX(0));
       right: 0; }
 
 .filter-wrapper {
@@ -75,6 +91,8 @@ select.nice-select-js {
   border-bottom: 1px solid var(--jobm-border-color); }
 
 .job-wrapper .job-holder {
+  -webkit-box-shadow: 0px 29px 35px #0000000d;
+  -moz-box-shadow: 0px 29px 35px #0000000d;
   box-shadow: 0px 29px 35px #0000000d;
   background-color: var(--jobm-white-color); }
   .job-wrapper .job-holder .body {
@@ -126,5 +144,76 @@ select.nice-select-js {
         height: 33px; }
   .job-wrapper .job-holder:not(:last-child) {
     margin-bottom: 60px; }
+
+.modal.modal {
+  padding-right: 0 !important;
+  z-index: 999999;
+  overflow: hidden; }
+  .modal.modal .modal-dialog {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    background-color: var(--jobm-white-color);
+    max-width: 775px;
+    padding: 0;
+    width: 100%;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%); }
+    .modal.modal .modal-dialog .modal-content {
+      height: 100%;
+      position: static;
+      border: none;
+      border-radius: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 11%; }
+      .modal.modal .modal-dialog .modal-content .modal-header,
+      .modal.modal .modal-dialog .modal-content .modal-body {
+        padding: 0;
+        border: none; }
+      @media (max-width: 991px) {
+        .modal.modal .modal-dialog .modal-content {
+          padding: 6% 7%; } }
+    .modal.modal .modal-dialog .modal-title {
+      font-size: 36px;
+      line-height: 1; }
+    .modal.modal .modal-dialog .btn-close {
+      position: absolute;
+      top: 30px;
+      right: 30px; }
+      @media (max-width: 991px) {
+        .modal.modal .modal-dialog .btn-close {
+          top: 20px;
+          right: 10px; } }
+  .modal.modal.show .modal-dialog {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+
+.modal-backdrop.modal-backdrop {
+  width: 0;
+  right: 0;
+  left: auto;
+  background: #01141cbf;
+  opacity: 1;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -ms-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms; }
+  .modal-backdrop.modal-backdrop.show {
+    width: 100% !important; }
 
 /*# sourceMappingURL=jobsmanager.css.map */

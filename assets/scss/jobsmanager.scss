@@ -1,3 +1,50 @@
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    } @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+@mixin justify-content($justify_content) {
+    -webkit-justify-content: $justify_content;
+    -ms-flex-pack: $justify_content;
+    justify-content: $justify_content;
+}
+@mixin transition($transition: 300ms) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin box-shadow($shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75)) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
 :root {
     --jobm-white-color: #fff;
     --jobm-black-color: #000;
@@ -72,10 +119,10 @@ select {
 
 @keyframes spin {
     from {
-        transform: rotate(0deg);
+        @include transform(rotate(0deg));
     }
     to {
-        transform: rotate(360deg);
+        @include transform(rotate(360deg));
     }
 }
 
@@ -86,7 +133,7 @@ select {
     display: inline-block;
     padding-bottom: 2px;
     span {
-        transform: 300ms;
+        @include transition(300ms);
     }
     svg {
         position: absolute;
@@ -95,7 +142,7 @@ select {
     &.loading {
         padding-right: 30px;
         svg {
-            translate: transform(translateX(0));
+            @include transform(transform(translateX(0)));
             right: 0;
         }
     }
@@ -109,7 +156,7 @@ select {
 
 .job-wrapper {
     .job-holder {
-        box-shadow: 0px 29px 35px #0000000d;
+        @include box-shadow(0px 29px 35px #0000000d);
         background-color: var(--jobm-white-color);
 
         .body {
@@ -118,7 +165,7 @@ select {
                 font-size: 3rem;
             }
             .location {
-                svg{
+                svg {
                     margin-right: 16px;
                 }
             }
@@ -189,5 +236,71 @@ select {
         &:not(:last-child) {
             margin-bottom: 60px;
         }
+    }
+}
+
+.modal.modal {
+    padding-right: 0 !important;
+    z-index: 999999;
+    overflow: hidden;
+    .modal-dialog {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        background-color: var(--jobm-white-color);
+        max-width: 775px;
+        padding: 0;
+        width: 100%;
+        @include transition(500ms);
+        @include transform(translateX(100%));
+        .modal-content {
+            height: 100%;
+            position: static;
+            border: none;
+            border-radius: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 11%;
+            .modal-header,
+            .modal-body {
+                padding: 0;
+                border: none;
+            }
+            @media(max-width: 991px) {
+                padding: 6% 7%;
+            }
+        }
+        .modal-title {
+            font-size: 36px;
+            line-height: 1;
+        }
+        .btn-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            @media(max-width: 991px) {
+                top: 20px;
+                right: 10px;
+            }
+        }
+    }
+    &.show {
+        .modal-dialog {
+            @include transform(translateX(0));
+        }
+    }
+}
+
+.modal-backdrop.modal-backdrop {
+    width: 0;
+    right: 0;
+    left: auto;
+    background: #01141cbf;
+    opacity: 1;
+    @include transition(500ms);
+    &.show {
+        width: 100% !important;
     }
 }
