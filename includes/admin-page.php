@@ -3,8 +3,7 @@ class Admin_Page
 {
     function __construct()
     {
-        add_action('wp_enqueue_scripts', array($this, 'assets'));
-        //add_action('admin_menu', array($this, 'jobsmanager_setup_admin_page'));
+       add_action('admin_menu', array($this, 'jobsmanager_setup_admin_page'));
     }
 
     function jobsmanager_setup_admin_page()
