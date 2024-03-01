@@ -20,7 +20,8 @@ class Admin_Page
             __('Job Manager', 'jobsmanager'),
             'manage_options',
             'job-manager-settings',
-            array($this, 'jobsmanager_setup_admin_page_init')
+            array($this, 'jobsmanager_setup_admin_page_init'),
+            1
         );
     }
 
