@@ -34,7 +34,7 @@ while (have_posts()) {
                 <div class="top-content">
                     <div class="row">
                         <div class="col-lg-8">
-                            <div class="heading-box">
+                            <div class="title-box">
                                 <h2>
                                     <?php the_title() ?>
                                 </h2>
