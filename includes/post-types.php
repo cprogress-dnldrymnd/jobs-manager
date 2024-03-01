@@ -24,9 +24,9 @@ class PostType
 
 
         if ($JobsManager->jobs_single()) {
-            $exclude_from_search = true;
-            $publicly_queryable = false;
-            $show_in_admin_bar = false;
+            $exclude_from_search = false;
+            $publicly_queryable = true;
+            $show_in_admin_bar = true;
         }
 
 
