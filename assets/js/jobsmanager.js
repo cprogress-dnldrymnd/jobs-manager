@@ -1,5 +1,6 @@
 jQuery(document).ready(function () {
     nice_select();
+    ajax_form();
     load_more_button_listener();
     console.log('xxxx');
 });
