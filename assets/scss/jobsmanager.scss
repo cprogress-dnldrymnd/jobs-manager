@@ -111,13 +111,25 @@ select {
     .career-holder {
         box-shadow: 0px 29px 35px #0000000d;
         background-color: var(--jobm-white-color);
-        .body {
-            padding: 3rem;
+
+        .accordion-holder {
+            .accordion-item {
+                .body {
+                    padding: 3rem;
+                }
+                .footer {
+                    border-top: 1px solid lightgray;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 32px;
+                }
+            }
         }
-        .footer {
-            border-top: 1px solid lightgray;
-        }
+
         .accordion-button {
+            padding: 0;
+            border: none;
+            box-shadow: none;
             &:after {
                 content: none;
             }
