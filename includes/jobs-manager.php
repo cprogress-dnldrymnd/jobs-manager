@@ -5,6 +5,7 @@ if (!class_exists('JobsManager')) {
         function __construct()
         {
             add_action('wp_enqueue_scripts', array($this, 'assets'));
+            add_action('template_include', array($this, 'wpse_force_template'));
         }
 
         function assets()
@@ -20,6 +21,19 @@ if (!class_exists('JobsManager')) {
                 wp_enqueue_style('jobsmanager-bootstrap', 'https: //cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
                 wp_enqueue_script('jobsmanager-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
             }
+        }
+
+
+        // Add a filter to 'template_include' hook
+        function wpse_force_template($template)
+        {
+            // If the current url is an archive of any kind
+            if (is_archive('jobs')) {
+                // Set this to the template file inside your plugin folder
+                $template = WP_PLUGIN_DIR . '/' . plugin_basename(dirname(__FILE__)) . '/archive-jobs.php';
+            }
+            // Always return, even if we didn't change anything
+            return $template;
         }
 
 
