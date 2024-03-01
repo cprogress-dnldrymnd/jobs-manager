@@ -5,6 +5,7 @@ if (!class_exists('JobsShortcodes')) {
         function __construct()
         {
             add_shortcode('jobs_manager_modal_form', array($this, 'jobs_manager_modal_form'));
+            add_shortcode('jobm_form_link', array($this, 'jobs_manager_modal_form'));
         }
 
 
@@ -36,7 +37,7 @@ if (!class_exists('JobsShortcodes')) {
             return ob_get_clean();
         }
 
-        function form_modal($atts)
+        function jobm_form_link($atts)
         {
             extract(
                 shortcode_atts(
