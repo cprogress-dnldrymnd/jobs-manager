@@ -16,7 +16,7 @@ if (!class_exists('PostMeta')) {
                 if (in_array($pagenow, $admin_pages)) {
 ?>
                     <div class="notice notice-warning is-dismissible">
-                        <p></p>
+                        <p>Carbonfield plugin is required.</p>
                     </div>
 <?php
                 }
