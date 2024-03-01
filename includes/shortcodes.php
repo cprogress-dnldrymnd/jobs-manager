@@ -35,6 +35,20 @@ if (!class_exists('JobsShortcodes')) {
 <?php
             return ob_get_clean();
         }
+
+        function form_modal($atts)
+        {
+            extract(
+                shortcode_atts(
+                    array(
+                        'text' => 'Apply Now',
+                    ),
+                    $atts
+                )
+            );
+
+            return '<a class="apply-button"> ' . $text . ' </a>';
+        }
     }
 }
 
