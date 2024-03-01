@@ -62,5 +62,5 @@ Container::make('post_meta', __('Job Details'))
                     'meta_label' => 'Role',
                 ),
             ))
-            ->set_header_template('<%- meta_label  %>')
+            ->set_header_template('<%- meta_label : meta_value  %>')
     ));
