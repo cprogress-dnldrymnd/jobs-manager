@@ -31,4 +31,4 @@ class JobsShortcodes
 }
 $Shortcodes = new JobsShortcodes;
 
-add_shortcode('jobs_manager_modal_form', array($this, 'jobs_manager_modal_form'));
+add_shortcode('jobs_manager_modal_form', array($Shortcodes, 'jobs_manager_modal_form'));
