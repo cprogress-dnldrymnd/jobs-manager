@@ -44,7 +44,7 @@ while (have_posts()) {
                                     <?php foreach ($meta_details as $details) { ?>
                                         <p>
                                             <span class="meta-label"><?= $details['meta_label'] ?></span>
-                                            <span class="meta-value"><?= $details['meata_value'] ?></span>
+                                            <span class="meta-value"><?= $details['meta_value'] ?></span>
                                         </p>
                                     <?php } ?>
                                 </div>
