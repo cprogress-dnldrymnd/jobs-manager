@@ -112,57 +112,66 @@ select {
         box-shadow: 0px 29px 35px #0000000d;
         background-color: var(--jobm-white-color);
 
-        .accordion-holder {
-            .accordion-item {
-                .body {
-                    padding: 3rem;
+        .body {
+            padding: 3rem;
+            .accordion-holder {
+                .accordion-item {
+                    border: none;
+                    background-color: transparent;
+                    .accordion-header {
+                        .accordion-button {
+                            padding: 0;
+                            border: none;
+                            box-shadow: none;
+                            padding: 0;
+                            border: none;
+                            box-shadow: none;
+                            background-color: transparent;
+                            &:after {
+                                content: none;
+                            }
+                            svg {
+                                width: 40px;
+                                height: 40px;
+                            }
+                            &[aria-expanded="false"] {
+                                .icon-inactive {
+                                    display: inline-block;
+                                }
+                                .icon-active {
+                                    display: none;
+                                }
+                            }
+                            &[aria-expanded="true"] {
+                                .icon-inactive {
+                                    display: none;
+                                }
+                                .icon-active {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 32px;
+                    }
                 }
-                .footer {
-                    border-top: 1px solid lightgray;
-                }
-                &:not(:last-child) {
-                    margin-bottom: 32px;
+            }
+        }
+        .footer {
+            border-top: 1px solid lightgray;
+            .btn {
+                padding: 36px 24px;
+                font-weight: bold;
+                border-radius: 0;
+                svg {
+                    width: 33px;
+                    height: 33px;
                 }
             }
         }
 
-        .accordion-button {
-            padding: 0;
-            border: none;
-            box-shadow: none;
-            &:after {
-                content: none;
-            }
-            svg {
-                width: 20px;
-                height: 20px;
-            }
-            &[aria-expanded="false"] {
-                .icon-inactive {
-                    display: inline-block;
-                }
-                .icon-active {
-                    display: none;
-                }
-            }
-            &[aria-expanded="true"] {
-                .icon-inactive {
-                    display: none;
-                }
-                .icon-active {
-                    display: inline-block;
-                }
-            }
-        }
-        .btn {
-            padding: 36px 24px;
-            font-weight: bold;
-            border-radius: 0;
-            svg {
-                width: 33px;
-                height: 33px;
-            }
-        }
         &:not(:last-child) {
             margin-bottom: 60px;
         }

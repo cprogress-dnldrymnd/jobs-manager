@@ -77,36 +77,43 @@ select.nice-select-js {
 .job-wrapper .career-holder {
   box-shadow: 0px 29px 35px #0000000d;
   background-color: var(--jobm-white-color); }
-  .job-wrapper .career-holder .accordion-holder .accordion-item .body {
+  .job-wrapper .career-holder .body {
     padding: 3rem; }
-  .job-wrapper .career-holder .accordion-holder .accordion-item .footer {
+    .job-wrapper .career-holder .body .accordion-holder .accordion-item {
+      border: none;
+      background-color: transparent; }
+      .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button {
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        background-color: transparent; }
+        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button:after {
+          content: none; }
+        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button svg {
+          width: 40px;
+          height: 40px; }
+        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="false"] .icon-inactive {
+          display: inline-block; }
+        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="false"] .icon-active {
+          display: none; }
+        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="true"] .icon-inactive {
+          display: none; }
+        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="true"] .icon-active {
+          display: inline-block; }
+      .job-wrapper .career-holder .body .accordion-holder .accordion-item:not(:last-child) {
+        margin-bottom: 32px; }
+  .job-wrapper .career-holder .footer {
     border-top: 1px solid lightgray; }
-  .job-wrapper .career-holder .accordion-holder .accordion-item:not(:last-child) {
-    margin-bottom: 32px; }
-  .job-wrapper .career-holder .accordion-button {
-    padding: 0;
-    border: none;
-    box-shadow: none; }
-    .job-wrapper .career-holder .accordion-button:after {
-      content: none; }
-    .job-wrapper .career-holder .accordion-button svg {
-      width: 20px;
-      height: 20px; }
-    .job-wrapper .career-holder .accordion-button[aria-expanded="false"] .icon-inactive {
-      display: inline-block; }
-    .job-wrapper .career-holder .accordion-button[aria-expanded="false"] .icon-active {
-      display: none; }
-    .job-wrapper .career-holder .accordion-button[aria-expanded="true"] .icon-inactive {
-      display: none; }
-    .job-wrapper .career-holder .accordion-button[aria-expanded="true"] .icon-active {
-      display: inline-block; }
-  .job-wrapper .career-holder .btn {
-    padding: 36px 24px;
-    font-weight: bold;
-    border-radius: 0; }
-    .job-wrapper .career-holder .btn svg {
-      width: 33px;
-      height: 33px; }
+    .job-wrapper .career-holder .footer .btn {
+      padding: 36px 24px;
+      font-weight: bold;
+      border-radius: 0; }
+      .job-wrapper .career-holder .footer .btn svg {
+        width: 33px;
+        height: 33px; }
   .job-wrapper .career-holder:not(:last-child) {
     margin-bottom: 60px; }
 
