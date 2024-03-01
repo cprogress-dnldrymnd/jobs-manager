@@ -147,7 +147,7 @@ $Jobs->exclude_from_search = true;
 $Jobs->publicly_queryable = false;
 $Jobs->show_in_admin_bar = false;
 $Jobs->has_archive = false;
-$Jobs->show_in_menu = 'jobsmanager.php';
+$Jobs->show_in_menu = 'admin.php?page=jobsmanager.php';
 
 $Location = new Taxonomny();
 $Location->taxonomy = 'location';
