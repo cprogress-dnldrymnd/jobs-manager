@@ -39,7 +39,7 @@ if (!class_exists('JobsManager')) {
         function jobsmanager_setup_post_type()
         {
 
-            $Testimonials = new PostTypes();
+            $Testimonials = new PostType();
             $Testimonials->name = 'Testimonials';
             $Testimonials->singular_name = 'Testimonial';
             $Testimonials->icon = 'dashicons-testimonial';
