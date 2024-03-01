@@ -2,8 +2,6 @@
 if (!class_exists('JobsManager')) {
     class JobsManager
     {
-        var $api_key;
-
         function __construct()
         {
             add_action('wp_enqueue_scripts', array($this, 'assets'));
