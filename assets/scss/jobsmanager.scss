@@ -1,6 +1,7 @@
 :root {
     --jobm-white-color: #fff;
     --jobm-black-color: #000;
+    --jobm-border-color: #707070;
 }
 #jobs-main {
     padding-top: 100px;
@@ -99,6 +100,12 @@ select {
             right: 0;
         }
     }
+}
+
+.filter-wrapper {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid var(--jobm-border-color);
 }
 
 .job-wrapper {
