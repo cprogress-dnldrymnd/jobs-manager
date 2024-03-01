@@ -18,7 +18,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-require_once('includes/post-types.php');
+include 'includes/post-types.php';
 
 if (!class_exists('JobsManager')) {
     class JobsManager
