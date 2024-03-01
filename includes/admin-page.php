@@ -40,8 +40,8 @@ class Admin_Page
 
     function jobsmanager_highlight_taxonomy_parent_menu($parent_file)
     {
-        if (get_current_screen()->taxonomy == 'question_section') {
-            $parent_file = 'edit.php?post_type=quiz';
+        if (get_current_screen()->taxonomy == 'location') {
+            $parent_file = 'edit.php?post_type=jobs';
         }
 
         return $parent_file;
