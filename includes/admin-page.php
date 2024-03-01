@@ -15,7 +15,7 @@ class Admin_Page
          * Adds a submenu page under a custom post type parent.
          */
 
-   
+
 
         add_submenu_page(
             'jobsmanager',
@@ -25,6 +25,7 @@ class Admin_Page
             'edit-tags.php?taxonomy=location',
         );
 
+        /*
         add_submenu_page(
             'jobsmanager',
             __('Settings', 'jobsmanager'),
@@ -32,13 +33,14 @@ class Admin_Page
             'manage_options',
             'job-manager-settings',
             array($this, 'jobsmanager_setup_admin_page_init'),
-        );
+        );*/
     }
 
+    /*
     function jobsmanager_setup_admin_page_init()
     {
         echo "<h1>Job Manager</h1>";
-    }
+    }*/
 
     function jobsmanager_highlight_taxonomy_parent_menu($parent_file)
     {
