@@ -13,13 +13,11 @@ if (!class_exists('PostMeta')) {
 
                 global $pagenow;
                 $admin_pages = ['index.php', 'edit.php?post_type=jobs', 'plugins.php'];
-                if (in_array($pagenow, $admin_pages)) {
 ?>
-                    <div class="notice notice-warning ">
-                        <p>Carbonfield plugin is required.</p>
-                    </div>
+                <div class="notice notice-warning ">
+                    <p>Carbonfield plugin is required.</p>
+                </div>
 <?php
-                }
             }
         }
     }
