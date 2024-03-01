@@ -16,8 +16,8 @@ if (!class_exists('JobsManager')) {
             wp_enqueue_style('jobsmanager-niceselect', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css');
             wp_enqueue_script('jobsmanager-niceselect', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js');
 
-            wp_enqueue_style('jobsmanager-style', plugin_dir_url(plugin_basename()) . '/assets/css/jobsmanager.css');
-            wp_enqueue_script('jobsmanager-style', plugin_dir_url(plugin_basename()) . '/assets/js/jobsmanager.js');
+            wp_enqueue_style('jobsmanager-style', plugin_dir_url() . '/jobs-manager/assets/css/jobsmanager.css');
+            wp_enqueue_script('jobsmanager-style', plugin_dir_url() . '/jobs-manager/assets/js/jobsmanager.js');
 
 
             if (!$JobsManager->disable_bootstrap()) {
