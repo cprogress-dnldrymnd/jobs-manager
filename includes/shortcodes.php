@@ -1,5 +1,5 @@
 <?php
-class Shortcodes
+class JobsShortcodes
 {
 
     function __construct()
@@ -37,4 +37,4 @@ class Shortcodes
     }
 }
 
-new Shortcodes();
+new JobsShortcodes();
