@@ -50,18 +50,6 @@ if (!class_exists('JobsManager')) {
     }
 }
 
-function jobsmanager_create_post_type()
-{
-    $Jobs = new PostType();
-    $Jobs->name = 'Jobs';
-    $Jobs->singular_name = 'Job';
-    $Jobs->icon = 'dashicons-businessperson';
-    $Jobs->supports = array('title', 'revisions');
-    $Jobs->exclude_from_search = true;
-    $Jobs->publicly_queryable = false;
-    $Jobs->show_in_admin_bar = false;
-    $Jobs->has_archive = false;
-}
 
 function run()
 {

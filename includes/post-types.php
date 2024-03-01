@@ -60,7 +60,7 @@ class PostType
 /*-----------------------------------------------------------------------------------*/
 /* Taxonomy
 /*-----------------------------------------------------------------------------------*/
-class newTaxonomy
+class Taxonomny
 {
     public $taxonomy;
     public $post_type;
@@ -134,3 +134,25 @@ class newTaxonomy
         return $columns;
     }
 }
+
+$Jobs = new PostType();
+$Jobs->name = 'Jobs';
+$Jobs->singular_name = 'Job';
+$Jobs->icon = 'dashicons-businessperson';
+$Jobs->supports = array('title', 'revisions');
+$Jobs->exclude_from_search = true;
+$Jobs->publicly_queryable = false;
+$Jobs->show_in_admin_bar = false;
+$Jobs->has_archive = false;
+
+$Location = new Taxonomny();
+$Location->taxonomy = 'location';
+$Location->post_type = 'Jobs';
+$Location->args = array(
+    'label'        => 'Location',
+    'rewrite'      => array('slug' => 'location-category'),
+    'hierarchical' => true,
+    'query_var'    => true,
+    'has_archive'  => true,
+    'show_in_rest' => true,
+);
