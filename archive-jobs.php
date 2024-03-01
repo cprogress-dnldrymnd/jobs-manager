@@ -5,6 +5,7 @@ $terms = $JobsManager->get_terms_details('location');
 $jobs_alt_title = $JobsManager->jobs_alt_title();
 $jobs_description = $JobsManager->jobs_description();
 ?>
+<?php do_action('jobs_before_main_content') ?>
 <main id="jobs-main">
 
     <section class="jobs-title-section text-center">
@@ -74,6 +75,7 @@ $jobs_description = $JobsManager->jobs_description();
         </div>
     </div>
 </main>
+<?php do_action('jobs_after_main_content') ?>
 <?php
 get_footer();
 ?>
