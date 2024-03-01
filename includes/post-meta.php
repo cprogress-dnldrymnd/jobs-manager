@@ -23,7 +23,7 @@ if (!class_exists('PostMeta')) {
         function jobsmanager_post_meta()
         {
             if (function_exists('carbon_get_the_post_meta')) {
-                require plugin_dir_path(__FILE__) . '/ost-types-fields.php';
+                require plugin_dir_path(__FILE__) . 'post-types-fields.php';
             }
         }
     }
