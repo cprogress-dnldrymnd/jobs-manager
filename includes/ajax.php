@@ -40,6 +40,8 @@ class Ajax
 		echo $this->hide_load_more($count, $offset, $posts_per_page);
 
 		if ($the_query->have_posts()) {
+
+			$JobsManager = new JobsManager;
 ?>
 			<?php if (!$offset) { ?>
 				<div class="job-wrapper">
@@ -125,13 +127,15 @@ class Ajax
 							</div>
 							<div class="footer">
 								<div class="row">
-									<div class="col">
-										<div class="button-box">
-											<button type="button" class="btn btn-primary" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
-												<span>LEARN MORE</span>
-											</button>
+									<?php if ($JobsManager->jobs_single()) { ?>
+										<div class="col">
+											<div class="button-box">
+												<button type="button" class="btn btn-link" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
+													<span>LEARN MORE</span>
+												</button>
+											</div>
 										</div>
-									</div>
+									<?php } ?>
 									<div class="col">
 										<div class="button-box">
 											<button type="button" class="btn btn-primary" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
