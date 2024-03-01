@@ -60,6 +60,9 @@ $image = $JobsManager->get__post_meta('image');
                     </div>
                 </div>
             </div>
+            <div class="main-content">
+                <?php the_content() ?>
+            </div>
         </div>
     </section>
 
