@@ -8,7 +8,7 @@ class Admin_Page
 
     function jobsmanager_setup_admin_page()
     {
-        add_menu_page('Job Manager', 'Job Manager', 'manage_options', 'jobsmanager');
+        add_menu_page('Job Manager', 'Job Manager', 'manage_options', '');
 
         /**
          * Adds a submenu page under a custom post type parent.
