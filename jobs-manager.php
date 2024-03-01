@@ -19,8 +19,8 @@ define('JobsManager_Version', '1.0.0');
 
 require plugin_dir_path(__FILE__) . 'includes/jobs-manager.php';
 
-require plugin_dir_path(__FILE__) . 'includes/post-types.php';
-
 require plugin_dir_path(__FILE__) . 'includes/admin-page.php';
 
 require plugin_dir_path(__FILE__) . 'includes/post-meta.php';
+
+require plugin_dir_path(__FILE__) . 'includes/post-types.php';
