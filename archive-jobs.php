@@ -7,7 +7,7 @@ $jobs_description = $JobsManager->jobs_description();
 ?>
 <main id="main">
 
-    <section class="jobs-title-section">
+    <section class="jobs-title-section text-center">
         <div class="container">
             <div class="heading-box">
                 <h1>
