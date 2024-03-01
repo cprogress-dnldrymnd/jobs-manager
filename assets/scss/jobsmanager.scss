@@ -1,4 +1,4 @@
-.jobs-title-section  {
+.jobs-title-section {
     padding-top: 100px;
     padding-bottom: 100px;
     .inner {
@@ -13,14 +13,11 @@
     padding-bottom: 100px;
 }
 
-
 .nice-select {
     &.nice-select-js {
         border: none;
         font-size: 22px;
-        color: #282124;
         padding: 0 35px 0 0;
-        color: $dark;
         float: none;
         width: auto;
         display: inline-block;
@@ -29,14 +26,6 @@
             li {
                 font-size: 18px;
             }
-        }
-        @include after {
-            border-color: $dark;
-            width: 10px;
-            height: 10px;
-        }
-        @include respond-to(mobile) {
-            font-size: 18px;
         }
     }
     &.nice-select-transparent {
@@ -79,12 +68,12 @@ select {
 
 .load-more a {
     position: relative;
-    @include transition(300ms);
+    transform: 300ms;
     overflow: hidden;
     display: inline-block;
     padding-bottom: 2px;
     span {
-        @include transition(300ms);
+        transform: 300ms;
     }
     svg {
         position: absolute;
@@ -93,7 +82,7 @@ select {
     &.loading {
         padding-right: 30px;
         svg {
-            @include transform(translateX(0));
+            translate: transform(translateX(0));
             right: 0;
         }
     }
