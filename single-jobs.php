@@ -101,6 +101,8 @@ while (have_posts()) {
                 </div>
             </div>
         </section>
+        <?= do_shortcode('[jobs_manager_modal_form]') ?>
+
     </main>
     <?php do_action('jobs_after_main_content') ?>
 <?php } ?>
