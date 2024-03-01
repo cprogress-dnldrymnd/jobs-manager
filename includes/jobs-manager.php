@@ -37,6 +37,8 @@ if (!class_exists('JobsManager')) {
             if (is_archive('jobs')) {
                 // Set this to the template file inside your plugin folder
                 $template = WP_PLUGIN_DIR . '/jobs-manager/archive-jobs.php';
+            } else if(is_single() && get_post_type() == 'jobs') {
+                $template = WP_PLUGIN_DIR . '/jobs-manager/single-jobs.php';
             }
             // Always return, even if we didn't change anything
             return $template;
