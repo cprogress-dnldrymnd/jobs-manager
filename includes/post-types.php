@@ -12,6 +12,7 @@ class PostType
     public $show_in_admin_bar = true;
     public $has_archive = true;
     public $hierarchical = false;
+    public $show_in_menu = true;
 
     function __construct()
     {
@@ -40,6 +41,7 @@ class PostType
                     'parent_item_colon'  => __('Parent :' . $this->name),
                     'not_found'          => __('No ' . strtolower($this->name) . ' found.'),
                     'not_found_in_trash' => __('No ' . strtolower($this->name) . ' found in Trash.')
+
                 ),
                 'show_in_rest'        => $this->show_in_rest,
                 'supports'            => $this->supports,
@@ -52,6 +54,7 @@ class PostType
                 'exclude_from_search' => $this->exclude_from_search,
                 'publicly_queryable'  => $this->publicly_queryable,
                 'show_in_admin_bar'   => $this->show_in_admin_bar,
+                'show_in_menu'        => $this->show_in_menu
             )
         );
     }
