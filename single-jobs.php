@@ -100,7 +100,7 @@ while (have_posts()) {
                     </div>
                 </div>
             </div>
-        </section>
+        </section>f
         <?= do_shortcode('[jobs_manager_modal_form]') ?>
 
     </main>

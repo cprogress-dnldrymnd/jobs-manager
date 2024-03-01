@@ -6,7 +6,7 @@ if (!class_exists('JobsManager')) {
         {
             add_action('wp_enqueue_scripts', array($this, 'assets'));
             add_action('template_include', array($this, 'wpse_force_template'));
-            add_action('jobs_manager_modal_form', array($this, 'jobs_manager_modal_form'));
+            add_shortcode('jobs_manager_modal_form', array($this, 'jobs_manager_modal_form'));
         }
 
         function assets()
