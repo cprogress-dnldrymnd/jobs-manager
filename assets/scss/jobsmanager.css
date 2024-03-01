@@ -146,11 +146,11 @@ select.nice-select-js {
   .job-wrapper .job-holder:not(:last-child) {
     margin-bottom: 60px; }
 
-.modal.modal {
+#applyModal {
   padding-right: 0 !important;
   z-index: 999999;
   overflow: hidden; }
-  .modal.modal .modal-dialog {
+  #applyModal .modal-dialog {
     position: absolute;
     right: 0;
     top: 0;
@@ -170,33 +170,30 @@ select.nice-select-js {
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
     transform: translateX(100%); }
-    .modal.modal .modal-dialog .modal-content {
+    #applyModal .modal-dialog .modal-content {
       height: 100%;
       position: static;
       border: none;
       border-radius: 0;
       overflow-y: auto;
       overflow-x: hidden;
-      padding: 11%; }
-      .modal.modal .modal-dialog .modal-content .modal-header,
-      .modal.modal .modal-dialog .modal-content .modal-body {
+      padding: 50px; }
+      #applyModal .modal-dialog .modal-content .modal-header,
+      #applyModal .modal-dialog .modal-content .modal-body {
         padding: 0;
         border: none; }
-      @media (max-width: 991px) {
-        .modal.modal .modal-dialog .modal-content {
-          padding: 6% 7%; } }
-    .modal.modal .modal-dialog .modal-title {
+    #applyModal .modal-dialog .modal-title {
       font-size: 36px;
       line-height: 1; }
-    .modal.modal .modal-dialog .btn-close {
+    #applyModal .modal-dialog .btn-close {
       position: absolute;
       top: 30px;
       right: 30px; }
       @media (max-width: 991px) {
-        .modal.modal .modal-dialog .btn-close {
+        #applyModal .modal-dialog .btn-close {
           top: 20px;
           right: 10px; } }
-  .modal.modal.show .modal-dialog {
+  #applyModal.show .modal-dialog {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);

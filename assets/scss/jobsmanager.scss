@@ -240,7 +240,7 @@ select {
     }
 }
 
-.modal.modal {
+#applyModal {
     padding-right: 0 !important;
     z-index: 999999;
     overflow: hidden;
@@ -263,15 +263,15 @@ select {
             border-radius: 0;
             overflow-y: auto;
             overflow-x: hidden;
-            padding: 11%;
+            padding: 50px;
             .modal-header,
             .modal-body {
                 padding: 0;
                 border: none;
             }
-            @media(max-width: 991px) {
-                padding: 6% 7%;
-            }
+
+           
+         
         }
         .modal-title {
             font-size: 36px;
