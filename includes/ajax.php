@@ -1,6 +1,6 @@
 <?php
-add_action('wp_ajax_nopriv_jobs_ajax', array($this, 'jobs_ajax'));
-add_action('wp_ajax_jobs_ajax', array($this, 'jobs_ajax'));
+add_action('wp_ajax_nopriv_jobs_ajax', 'jobs_ajax');
+add_action('wp_ajax_jobs_ajax', 'jobs_ajax');
 
 function jobs_ajax()
 {
