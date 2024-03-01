@@ -22,7 +22,6 @@
 }
 
 .jobs-archive {
- 
 }
 
 .nice-select {
@@ -110,11 +109,11 @@ select {
 
 .job-wrapper {
     .career-holder {
-        box-shadow: 0px 29px 35px #0000000D;
+        box-shadow: 0px 29px 35px #0000000d;
         background-color: var(--jobm-white-color);
         .accordion-button {
             &:after {
-                content: '';
+                content: none;
             }
         }
         .btn {

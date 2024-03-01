@@ -75,10 +75,10 @@ select.nice-select-js {
   border-bottom: 1px solid var(--jobm-border-color); }
 
 .job-wrapper .career-holder {
-  box-shadow: 0px 29px 35px #0000000D;
+  box-shadow: 0px 29px 35px #0000000d;
   background-color: var(--jobm-white-color); }
   .job-wrapper .career-holder .accordion-button:after {
-    content: ''; }
+    content: none; }
   .job-wrapper .career-holder .btn {
     padding: 36px 24px;
     font-weight: bold;
