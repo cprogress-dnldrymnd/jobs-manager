@@ -14,7 +14,7 @@ if (!class_exists('PostMeta')) {
             if (in_array($pagenow, $admin_pages)) {
 ?>
                 <div class="notice notice-warning is-dismissible">
-                    <p>Testssss...</p>
+                    <p></p>
                 </div>
 <?php
             }

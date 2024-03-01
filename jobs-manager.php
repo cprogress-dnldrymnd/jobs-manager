@@ -26,4 +26,3 @@ require plugin_dir_path(__FILE__) . 'includes/admin-page.php';
 if (function_exists('carbon_get_the_post_meta')) {
     require plugin_dir_path(__FILE__) . 'includes/post-meta.php';
 }
-require plugin_dir_path(__FILE__) . 'includes/post-meta.php';
