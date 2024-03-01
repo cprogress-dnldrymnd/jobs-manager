@@ -18,7 +18,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
- require_once('includes/post-types.php');
+require_once('includes/post-types.php');
 
 if (!class_exists('JobsManager')) {
     class JobsManager
@@ -39,7 +39,7 @@ if (!class_exists('JobsManager')) {
         function jobsmanager_setup_post_type()
         {
 
-            $Testimonials = new PostType();
+            $Testimonials = new PostTypes();
             $Testimonials->name = 'Testimonials';
             $Testimonials->singular_name = 'Testimonial';
             $Testimonials->icon = 'dashicons-testimonial';
@@ -48,8 +48,6 @@ if (!class_exists('JobsManager')) {
             $Testimonials->publicly_queryable = false;
             $Testimonials->show_in_admin_bar = false;
             $Testimonials->has_archive = false;
-
-            echo 'test';
         }
     }
 }
