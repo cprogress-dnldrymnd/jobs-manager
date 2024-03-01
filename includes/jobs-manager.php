@@ -6,24 +6,26 @@ if (!class_exists('JobsManager')) {
         {
             add_action('wp_enqueue_scripts', array($this, 'assets'));
             add_action('template_include', array($this, 'wpse_force_template'));
-
         }
 
         function assets()
         {
-            $JobsManager = new JobsManager;
+
+            if (is_post_type_archive('jobs') || get_post_type() == 'jobs') {
+
+                $JobsManager = new JobsManager;
+
+                wp_enqueue_style('jobsmanager-niceselect', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css');
+                wp_enqueue_script('jobsmanager-niceselect', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js');
+
+                wp_enqueue_style('jobsmanager-style', WP_PLUGIN_URL  . '/jobs-manager/assets/scss/jobsmanager.css');
+                wp_enqueue_script('jobsmanager-style', WP_PLUGIN_URL . '/jobs-manager/assets/js/jobsmanager.js');
 
 
-            wp_enqueue_style('jobsmanager-niceselect', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css');
-            wp_enqueue_script('jobsmanager-niceselect', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js');
-
-            wp_enqueue_style('jobsmanager-style', WP_PLUGIN_URL  . '/jobs-manager/assets/scss/jobsmanager.css');
-            wp_enqueue_script('jobsmanager-style', WP_PLUGIN_URL . '/jobs-manager/assets/js/jobsmanager.js');
-
-
-            if (!$JobsManager->disable_bootstrap()) {
-                wp_enqueue_style('jobsmanager-bootstrap', 'https: //cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
-                wp_enqueue_script('jobsmanager-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
+                if (!$JobsManager->disable_bootstrap()) {
+                    wp_enqueue_style('jobsmanager-bootstrap', 'https: //cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+                    wp_enqueue_script('jobsmanager-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
+                }
             }
         }
 
