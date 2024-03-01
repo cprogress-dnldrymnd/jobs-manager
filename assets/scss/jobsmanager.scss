@@ -62,11 +62,18 @@
 }
 .post-type-archive-jobs {
     .jobs-title-section {
-        .inner {
+        .heading-box {
             max-width: 750px;
             margin-left: auto;
             margin-right: auto;
         }
+    }
+}
+.jobs-title-section {
+    .description-box {
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

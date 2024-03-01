@@ -10,7 +10,12 @@
   #jobs-main section:not(:last-child) {
     margin-bottom: 100px; }
 
-.post-type-archive-jobs .jobs-title-section .inner {
+.post-type-archive-jobs .jobs-title-section .heading-box {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.jobs-title-section .description-box {
   max-width: 750px;
   margin-left: auto;
   margin-right: auto; }
