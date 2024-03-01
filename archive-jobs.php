@@ -1,5 +1,7 @@
 <?php
 get_header();
+$JobsManager = new JobsManager;
+$terms = $JobsManager->get_terms_details('location');
 ?>
 <main id="main">
     <section class="careers-archive background-light">
