@@ -69,7 +69,13 @@ $jobs_description = $JobsManager->jobs_description();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body contact-form-v2">
-                    <?= do_shortcode($JobsManager->)) ?>
+                    <?php
+                    if ($JobsManager->jobs_contact_form()) {
+                        echo do_shortcode($JobsManager->jobs_contact_form());
+                    } else {
+                        echo '<h2> Contact Form Shortcode Error </h2>';
+                    }
+                    ?>
                 </div>
             </div>
         </div>
