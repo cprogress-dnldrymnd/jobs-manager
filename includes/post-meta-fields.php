@@ -48,8 +48,8 @@ Container::make('post_meta', __('Job Details'))
     ->add_tab('Meta Details', array(
         Field::make('complex', 'meta_details', 'Meta Details')
             ->add_fields(array(
-                Field::make('text', 'label', 'label'),
-                Field::make('text', 'value', 'Value'),
+                Field::make('text', 'meta_label', 'label'),
+                Field::make('text', 'meta_value', 'Value'),
             ))
             ->set_default_value(array(
                 array(
