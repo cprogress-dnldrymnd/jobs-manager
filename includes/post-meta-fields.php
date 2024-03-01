@@ -46,7 +46,7 @@ Container::make('post_meta', __('Job Details'))
             ->set_header_template('<%- accordion_title  %>')
     ))
     ->add_tab('Meta Details', array(
-        Field::make('complex', 'accordion', 'Meta Details')
+        Field::make('complex', 'meta_details', 'Meta Details')
             ->add_fields(array(
                 Field::make('text', 'label', 'label'),
                 Field::make('text', 'value', 'Value'),
