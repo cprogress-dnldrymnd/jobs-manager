@@ -16,7 +16,7 @@ if (!class_exists('PostMeta')) {
                 <div class="notice notice-warning is-dismissible">
                     <p>Testssss...</p>
                 </div>
-<?
+<?php
             }
         }
     }
