@@ -5,7 +5,8 @@
 
 #jobs-main {
   padding-top: 100px;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  min-height: 770px; }
   #jobs-main section:not(:last-child) {
     margin-bottom: 100px; }
 
