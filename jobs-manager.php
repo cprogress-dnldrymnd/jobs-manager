@@ -38,14 +38,11 @@ if (!class_exists('JobsManager')) {
         function jobsmanager_setup_post_type()
         {
 
-            require_once('includes/post-types.php');
-
-
             $labels = array(
-                'name'                  => _x('Post Types', 'Post Type General Name', 'text_domain'),
-                'singular_name'         => _x('Post Type', 'Post Type Singular Name', 'text_domain'),
-                'menu_name'             => __('Post Types', 'text_domain'),
-                'name_admin_bar'        => __('Post Type', 'text_domain'),
+                'name'                  => _x('Jobs', 'Job General Name', 'text_domain'),
+                'singular_name'         => _x('Job', 'Job Singular Name', 'text_domain'),
+                'menu_name'             => __('Jobs', 'text_domain'),
+                'name_admin_bar'        => __('Job', 'text_domain'),
                 'archives'              => __('Item Archives', 'text_domain'),
                 'attributes'            => __('Item Attributes', 'text_domain'),
                 'parent_item_colon'     => __('Parent Item:', 'text_domain'),
@@ -71,11 +68,10 @@ if (!class_exists('JobsManager')) {
                 'filter_items_list'     => __('Filter items list', 'text_domain'),
             );
             $args = array(
-                'label'                 => __('Post Type', 'text_domain'),
-                'description'           => __('Post Type Description', 'text_domain'),
+                'label'                 => __('Job', 'text_domain'),
+                'description'           => __('Job Description', 'text_domain'),
                 'labels'                => $labels,
                 'supports'              => false,
-                'taxonomies'            => array('category', 'post_tag'),
                 'hierarchical'          => false,
                 'public'                => true,
                 'show_ui'               => true,
