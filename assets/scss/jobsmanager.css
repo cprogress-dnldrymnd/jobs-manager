@@ -79,7 +79,7 @@ select.nice-select-js {
   background-color: var(--jobm-white-color); }
   .job-wrapper .career-holder .body {
     padding: 3rem; }
-    .job-wrapper .career-holder .body .job-title {
+    .job-wrapper .career-holder .body .job-title h3 {
       font-size: 3rem; }
     .job-wrapper .career-holder .body .accordion-holder .accordion-item {
       border: none;
