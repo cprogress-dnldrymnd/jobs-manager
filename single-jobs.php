@@ -63,7 +63,7 @@ $image = $JobsManager->get__post_meta('image');
             <div class="main-content">
                 <?php the_content() ?>
             </div>
-            <div class="buttons">
+            <div class="jobs-buttons">
                 <div class="row">
                     <?php if ($JobsManager->jobs_single()) { ?>
                         <div class="col">

@@ -136,15 +136,16 @@ select.nice-select-js {
           margin-bottom: 1rem; }
   .job-wrapper .job-holder .footer {
     border-top: 1px solid lightgray; }
-    .job-wrapper .job-holder .footer .btn {
-      padding: 36px 24px;
-      font-weight: bold;
-      border-radius: 0; }
-      .job-wrapper .job-holder .footer .btn svg {
-        width: 33px;
-        height: 33px; }
   .job-wrapper .job-holder:not(:last-child) {
     margin-bottom: 60px; }
+
+.jobs-buttons {
+  padding: 36px 24px;
+  font-weight: bold;
+  border-radius: 0; }
+  .jobs-buttons svg {
+    width: 33px;
+    height: 33px; }
 
 #applyModal {
   padding-right: 0 !important;

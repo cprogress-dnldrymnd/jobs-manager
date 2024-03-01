@@ -222,15 +222,6 @@ select {
         }
         .footer {
             border-top: 1px solid lightgray;
-            .btn {
-                padding: 36px 24px;
-                font-weight: bold;
-                border-radius: 0;
-                svg {
-                    width: 33px;
-                    height: 33px;
-                }
-            }
         }
 
         &:not(:last-child) {
@@ -238,7 +229,15 @@ select {
         }
     }
 }
-
+.jobs-buttons {
+    padding: 36px 24px;
+    font-weight: bold;
+    border-radius: 0;
+    svg {
+        width: 33px;
+        height: 33px;
+    }
+}
 #applyModal {
     padding-right: 0 !important;
     z-index: 999999;
