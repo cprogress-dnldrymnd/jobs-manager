@@ -1,4 +1,5 @@
 <?php
+
 use Carbon_Fields\Container;
 use Carbon_Fields\Complex_Container;
 use Carbon_Fields\Field;
@@ -21,11 +22,14 @@ Container::make('theme_options', __('Settings'))
     ));
 
 
+
 Container::make('post_meta', __('Job Details'))
     ->where('post_type', '=', 'jobs')
-    ->add_fields(array(
+    ->add_tab('General Settings', array(
         Field::make('textarea', 'short_description', 'Short Description'),
         Field::make('text', 'salary', 'Salary'),
+    ))
+    ->add_tab('Accordion', array(
         Field::make('complex', 'accordion', 'Accordion')
             ->add_fields(array(
                 Field::make('text', 'accordion_title', 'Accordion Title'),
@@ -37,6 +41,25 @@ Container::make('post_meta', __('Job Details'))
                 ),
                 array(
                     'accordion_title' => 'Knowledge & Experience',
+                ),
+            ))
+            ->set_header_template('<%- accordion_title  %>')
+    ))
+    ->add_tab('Meta Details', array(
+        Field::make('complex', 'accordion', 'Meta Details')
+            ->add_fields(array(
+                Field::make('text', 'label', 'label'),
+                Field::make('text', 'value', 'Value'),
+            ))
+            ->set_default_value(array(
+                array(
+                    'label' => 'Job Type',
+                ),
+                array(
+                    'label' => 'Location',
+                ),
+                array(
+                    'label' => 'Role',
                 ),
             ))
             ->set_header_template('<%- accordion_title  %>')
