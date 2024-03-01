@@ -60,7 +60,7 @@ class Ajax
 							<div class="body">
 								<div class="row">
 									<div class="col-auto">
-										<div class="career-title">
+										<div class="job-title">
 											<h3><?php the_title() ?></h3>
 										</div>
 									</div>

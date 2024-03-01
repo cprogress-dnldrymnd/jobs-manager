@@ -114,6 +114,9 @@ select {
 
         .body {
             padding: 3rem;
+            .job-title {
+                font-size: 3rem;
+            }
             .accordion-holder {
                 .accordion-item {
                     border: none;
@@ -127,6 +130,7 @@ select {
                             border: none;
                             box-shadow: none;
                             background-color: transparent;
+                            font-size: 2rem;
                             &:after {
                                 content: none;
                             }
