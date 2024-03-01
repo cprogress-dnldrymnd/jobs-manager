@@ -92,7 +92,8 @@ select.nice-select-js {
         border: none;
         box-shadow: none;
         background-color: transparent;
-        font-size: 2rem; }
+        font-size: 2rem;
+        font-weight: bold; }
         .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button:after {
           content: none; }
         .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button svg {
