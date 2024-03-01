@@ -5,6 +5,7 @@ if (!class_exists('PostMeta')) {
         function __construct()
         {
             add_action('admin_notices', array($this, 'jobsmanager_notice'));
+            add_action('carbon_fields_register_fields', array($this, 'jobsmanager_post_meta'));
         }
 
         function jobsmanager_notice()
@@ -17,6 +18,29 @@ if (!class_exists('PostMeta')) {
                 </div>
 <?php
             }
+        }
+
+        function jobsmanager_post_meta()
+        {
+
+
+
+            Container::make('theme_options', __('Theme Option'))
+                ->add_fields(
+                    array(
+                        Field::make('complex', 'our_schools', 'Our Schools')
+                            ->add_fields(
+                                array(
+                                    Field::make('text', 'school', __('School')),
+
+                                )
+                            )
+                            ->set_layout('tabbed-vertical')
+                            ->set_header_template('<%- school  %>'),
+
+
+                    )
+                );
         }
     }
 }
