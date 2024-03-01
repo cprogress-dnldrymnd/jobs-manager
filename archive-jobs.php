@@ -2,8 +2,27 @@
 get_header();
 $JobsManager = new JobsManager;
 $terms = $JobsManager->get_terms_details('location');
+$jobs_alt_title = $JobsManager->jobs_alt_title();
+$jobs_description = $JobsManager->jobs_description();
 ?>
 <main id="main">
+
+    <section class="jobs-title-section">
+        <div class="container">
+            <div class="heading-box">
+                <h1>
+                    <?= $jobs_alt_title ? $jobs_alt_title : 'Jobs' ?>
+                </h1>
+            </div>
+            <?php if ($jobs_description) { ?>
+                <div class="description-box">
+                    <?= wpautop($jobs_alt_title) ?>
+                </div>
+            <?php } ?>
+
+        </div>
+    </section>
+
     <section class="careers-archive background-light">
         <div class="container container wide w-960">
             <div class="filter-wrapper justify-space-between align--center">
