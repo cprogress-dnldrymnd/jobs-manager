@@ -6,8 +6,6 @@ if (!class_exists('JobsManager')) {
         {
             add_action('wp_enqueue_scripts', array($this, 'assets'));
             add_action('template_include', array($this, 'wpse_force_template'));
-            $template = WP_PLUGIN_DIR . '/' . plugin_basename() . '/archive-jobs.php';
-            echo $template;
         }
 
         function assets()
@@ -32,7 +30,7 @@ if (!class_exists('JobsManager')) {
             // If the current url is an archive of any kind
             if (is_archive('jobs')) {
                 // Set this to the template file inside your plugin folder
-                $template = WP_PLUGIN_DIR . '/' . plugin_basename(dirname(__FILE__)) . '/archive-jobs.php';
+                $template = WP_PLUGIN_DIR . '/' . plugin_basename() . '/archive-jobs.php';
             }
             // Always return, even if we didn't change anything
             return $template;
