@@ -16,11 +16,19 @@ class Admin_Page
 
         add_submenu_page(
             'jobsmanager',
-            __('Job Manager', 'jobsmanager'),
-            __('Job Manager', 'jobsmanager'),
+            __('Settings', 'jobsmanager'),
+            __('Settings', 'jobsmanager'),
             'manage_options',
             'job-manager-settings',
             array($this, 'jobsmanager_setup_admin_page_init'),
+        );
+
+        add_submenu_page(
+            'jobsmanager',
+            __('Job Manager', 'jobsmanager'),
+            __('Job Manager', 'jobsmanager'),
+            'manage_categories',
+            'edit-tags.php?taxonomy=location',
         );
     }
 
