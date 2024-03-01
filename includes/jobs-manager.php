@@ -28,3 +28,5 @@ if (!class_exists('JobsManager')) {
         }
     }
 }
+
+new JobsManager();
