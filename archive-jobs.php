@@ -69,7 +69,7 @@ $jobs_description = $JobsManager->jobs_description();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body contact-form-v2">
-                    <?= do_shortcode(carbon_get_theme_option('jobs_contact_form')) ?>
+                    <?= do_shortcode($JobsManager->)) ?>
                 </div>
             </div>
         </div>

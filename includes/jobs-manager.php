@@ -104,6 +104,10 @@ if (!class_exists('JobsManager')) {
             return $this->get__theme_option('jobs_description');
         }
 
+        function jobs_contact_form() {
+            return $this->get__theme_option('jobs_contact_form');
+        }
+
         function get_terms_details($taxonomy, $hide_empty = false, $order = false)
         {
             $args = array(
