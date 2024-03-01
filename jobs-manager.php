@@ -48,6 +48,8 @@ if (!class_exists('JobsManager')) {
             $Testimonials->publicly_queryable = false;
             $Testimonials->show_in_admin_bar = false;
             $Testimonials->has_archive = false;
+
+            echo 'test';
         }
     }
 }
