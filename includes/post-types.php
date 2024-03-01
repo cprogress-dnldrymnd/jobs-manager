@@ -30,7 +30,7 @@ class PostType
         }
 
         if ($JobsManager->jobs_slug()) {
-            $rewrite =  array('slug' => 'location-category');
+            $rewrite =  array('slug' => $JobsManager->jobs_slug());
         }
         register_post_type(
             strtolower($this->name),
