@@ -115,6 +115,22 @@ select {
             &:after {
                 content: none;
             }
+            &[aria-expanded="false"] {
+                .icon-inactive {
+                    display: none;
+                }
+                .icon-active {
+                    display: inline-block;
+                }
+            }
+            &[aria-expanded="true"] {
+                .icon-inactive {
+                    display: inline-block;
+                }
+                .icon-active {
+                    display: none;
+                }
+            }
         }
         .btn {
             padding: 36px 24px;

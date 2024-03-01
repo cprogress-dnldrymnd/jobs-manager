@@ -79,6 +79,14 @@ select.nice-select-js {
   background-color: var(--jobm-white-color); }
   .job-wrapper .career-holder .accordion-button:after {
     content: none; }
+  .job-wrapper .career-holder .accordion-button[aria-expanded="false"] .icon-inactive {
+    display: none; }
+  .job-wrapper .career-holder .accordion-button[aria-expanded="false"] .icon-active {
+    display: inline-block; }
+  .job-wrapper .career-holder .accordion-button[aria-expanded="true"] .icon-inactive {
+    display: inline-block; }
+  .job-wrapper .career-holder .accordion-button[aria-expanded="true"] .icon-active {
+    display: none; }
   .job-wrapper .career-holder .btn {
     padding: 36px 24px;
     font-weight: bold;
