@@ -29,7 +29,7 @@ if (!class_exists('JobsManager')) {
             add_action('wp_enqueue_scripts', array($this, 'assets'));
             add_action('init', array($this, 'jobsmanager_setup_post_type'));
             add_action('init', array($this, 'jobsmanager_setup_taxonomy'));
-            add_action('wp_enqueue_scripts', array($this, 'jobsmanager_setup_admin_page'));
+            add_action('admin_menu', array($this, 'jobsmanager_setup_admin_page'));
         }
 
         function assets()
@@ -130,7 +130,7 @@ if (!class_exists('JobsManager')) {
 
         function jobsmanager_setup_admin_page()
         {
-            add_menu_page('Test Plugin Page', 'Test Plugin', 'manage_options', 'test-plugin', $this->jobsmanager_setup_admin_page_init());
+            add_menu_page('Test Plugin Page', 'Test Plugin', 'manage_options', 'test-plugin', 'jobsmanager_setup_admin_page_init');
         }
 
         function jobsmanager_setup_admin_page_init()
