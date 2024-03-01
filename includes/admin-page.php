@@ -8,7 +8,7 @@ class Admin_Page
 
     function jobsmanager_setup_admin_page()
     {
-        add_menu_page('Job Manager', 'Job Manager', 'manage_options', 'jobsmanager', array($this, 'jobsmanager_setup_admin_page_init'));
+        add_menu_page('Job Manager', 'Job Manager', 'manage_options', 'myplugin/myplugin-admin.php', array($this, 'jobsmanager_setup_admin_page_init'));
     }
 
     function jobsmanager_setup_admin_page_init()
