@@ -7,9 +7,6 @@ class PostType
     public $supports;
     public $rewrite;
     public $show_in_rest = false;
-    public $exclude_from_search = false;
-    public $publicly_queryable = true;
-    public $show_in_admin_bar = true;
     public $has_archive = true;
     public $hierarchical = false;
     public $show_in_menu = true;
@@ -23,6 +20,16 @@ class PostType
 
     function create_post_type()
     {
+        $JobsManager = new JobsManager;
+
+
+        if ($JobsManager->jobs_single()) {
+            $exclude_from_search = true;
+            $publicly_queryable = false;
+            $show_in_admin_bar = false;
+        }
+
+
         register_post_type(
             strtolower($this->name),
             array(
@@ -51,9 +58,9 @@ class PostType
                 'rewrite'             => $this->rewrite,
                 'menu_icon'           => $this->icon,
                 'capability_type'     => 'page',
-                'exclude_from_search' => $this->exclude_from_search,
-                'publicly_queryable'  => $this->publicly_queryable,
-                'show_in_admin_bar'   => $this->show_in_admin_bar,
+                'exclude_from_search' => $exclude_from_search,
+                'publicly_queryable'  => $publicly_queryable,
+                'show_in_admin_bar'   => $show_in_admin_bar,
                 'show_in_menu'        => $this->show_in_menu
             )
         );
@@ -143,10 +150,6 @@ $Jobs->name = 'Jobs';
 $Jobs->singular_name = 'Job';
 $Jobs->icon = 'dashicons-businessperson';
 $Jobs->supports = array('title', 'revisions', 'editor');
-$Jobs->exclude_from_search = true;
-$Jobs->publicly_queryable = false;
-$Jobs->show_in_admin_bar = false;
-$Jobs->has_archive = false;
 $Jobs->show_in_menu = 'jobsmanager';
 
 $Location = new Taxonomny();
