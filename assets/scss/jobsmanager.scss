@@ -70,7 +70,6 @@
     }
 }
 
-
 .nice-select {
     &.nice-select-js {
         border: none;
@@ -230,12 +229,14 @@ select {
     }
 }
 .jobs-buttons {
-    padding: 36px 24px;
-    font-weight: bold;
-    border-radius: 0;
-    svg {
-        width: 33px;
-        height: 33px;
+    .btn {
+        padding: 36px 24px;
+        font-weight: bold;
+        border-radius: 0;
+        svg {
+            width: 33px;
+            height: 33px;
+        }
     }
 }
 #applyModal {

@@ -139,11 +139,11 @@ select.nice-select-js {
   .job-wrapper .job-holder:not(:last-child) {
     margin-bottom: 60px; }
 
-.jobs-buttons {
+.jobs-buttons .btn {
   padding: 36px 24px;
   font-weight: bold;
   border-radius: 0; }
-  .jobs-buttons svg {
+  .jobs-buttons .btn svg {
     width: 33px;
     height: 33px; }
 
