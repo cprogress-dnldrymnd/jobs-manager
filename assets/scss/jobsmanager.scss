@@ -60,17 +60,16 @@
         }
     }
 }
-
-.jobs-title-section {
-    .inner {
-        max-width: 750px;
-        margin-left: auto;
-        margin-right: auto;
+.post-type-archive-jobs {
+    .jobs-title-section {
+        .inner {
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
-.jobs-archive {
-}
 
 .nice-select {
     &.nice-select-js {
@@ -269,9 +268,6 @@ select {
                 padding: 0;
                 border: none;
             }
-
-           
-         
         }
         .modal-title {
             font-size: 36px;
@@ -281,7 +277,7 @@ select {
             position: absolute;
             top: 30px;
             right: 30px;
-            @media(max-width: 991px) {
+            @media (max-width: 991px) {
                 top: 20px;
                 right: 10px;
             }
