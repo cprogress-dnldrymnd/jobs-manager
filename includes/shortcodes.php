@@ -6,8 +6,8 @@ if (!class_exists('JobsShortcodes')) {
         {
             add_shortcode('jobs_manager_modal_form', array($this, 'jobs_manager_modal_form'));
             add_shortcode('jobm_form_link', array($this, 'jobs_manager_modal_form'));
+            add_shortcode('jobm_application_pack_link', array($this, 'jobm_application_pack_link'));
         }
-
 
         function jobs_manager_modal_form()
         {
@@ -48,7 +48,28 @@ if (!class_exists('JobsShortcodes')) {
                 )
             );
 
-            return '<a class="apply-button"> ' . $text . ' </a>';
+            return '<a class="apply-button" href="#" data-title="' . get_the_title() . '" data-bs-toggle="modal" data-bs-target="#applyModal"> ' . $text . ' </a>';
+        }
+
+        function jobm_application_pack_link($atts)
+        {
+            $JobsManager = new JobsManager;
+            $application_pack = $JobsManager->get__post_meta('application_pack');
+
+            if ($application_pack) {
+                extract(
+                    shortcode_atts(
+                        array(
+                            'text' => 'Apply Now',
+                        ),
+                        $atts
+                    )
+                );
+
+                return '<a href="' . wp_get_attachment_url($application_pack) . '"> ' . $text . ' </a>';
+            } else {
+                return 'No application pack';
+            }
         }
     }
 }
