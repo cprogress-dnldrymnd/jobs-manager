@@ -11,8 +11,6 @@ if (!class_exists('PostMeta')) {
         {
             if (function_exists('carbon_get_the_post_meta')) {
 
-                global $pagenow;
-                $admin_pages = ['index.php', 'edit.php?post_type=jobs', 'plugins.php'];
 ?>
                 <div class="notice notice-warning ">
                     <p>Carbonfield plugin is required.</p>
