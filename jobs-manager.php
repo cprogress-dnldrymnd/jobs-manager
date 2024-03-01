@@ -18,10 +18,9 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-require_once('includes/post-types.php');
 
 if (!class_exists('JobsManager')) {
-    class JobsManager extends newPostType
+    class JobsManager
     {
         var $api_key;
 
@@ -38,6 +37,7 @@ if (!class_exists('JobsManager')) {
 
         function jobsmanager_setup_post_type()
         {
+            require_once('includes/post-types.php');
 
             $Testimonials = new newPostType();
             $Testimonials->name = 'Testimonials';
