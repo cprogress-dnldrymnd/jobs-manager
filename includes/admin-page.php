@@ -22,6 +22,7 @@ class Admin_Page
             'manage_options',
             'job-manager-settings',
             array($this, 'jobsmanager_setup_admin_page_init'),
+            3
         );
 
         add_submenu_page(
