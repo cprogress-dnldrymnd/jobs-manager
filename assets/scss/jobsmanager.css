@@ -74,51 +74,55 @@ select.nice-select-js {
   margin-bottom: 40px;
   border-bottom: 1px solid var(--jobm-border-color); }
 
-.job-wrapper .career-holder {
+.job-wrapper .job-holder {
   box-shadow: 0px 29px 35px #0000000d;
   background-color: var(--jobm-white-color); }
-  .job-wrapper .career-holder .body {
+  .job-wrapper .job-holder .body {
     padding: 3rem; }
-    .job-wrapper .career-holder .body .job-title h3 {
+    .job-wrapper .job-holder .body .job-title h3 {
       font-size: 3rem; }
-    .job-wrapper .career-holder .body .accordion-holder .accordion-item {
-      border: none;
-      background-color: transparent; }
-      .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button {
-        padding: 0;
+    .job-wrapper .job-holder .body .location svg {
+      margin-right: 16px; }
+    .job-wrapper .job-holder .body .accordion-holder {
+      margin-top: 2rem; }
+      .job-wrapper .job-holder .body .accordion-holder .accordion-item {
         border: none;
-        box-shadow: none;
-        padding: 0;
-        border: none;
-        box-shadow: none;
-        background-color: transparent;
-        font-size: 2rem;
-        font-weight: bold; }
-        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button:after {
-          content: none; }
-        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button svg {
-          width: 40px;
-          height: 40px; }
-        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="false"] .icon-inactive {
-          display: inline-block; }
-        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="false"] .icon-active {
-          display: none; }
-        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="true"] .icon-inactive {
-          display: none; }
-        .job-wrapper .career-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="true"] .icon-active {
-          display: inline-block; }
-      .job-wrapper .career-holder .body .accordion-holder .accordion-item:not(:last-child) {
-        margin-bottom: 32px; }
-  .job-wrapper .career-holder .footer {
+        background-color: transparent; }
+        .job-wrapper .job-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button {
+          padding: 0;
+          border: none;
+          box-shadow: none;
+          padding: 0;
+          border: none;
+          box-shadow: none;
+          background-color: transparent;
+          font-size: 2rem;
+          font-weight: bold; }
+          .job-wrapper .job-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button:after {
+            content: none; }
+          .job-wrapper .job-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button svg {
+            width: 40px;
+            height: 40px; }
+          .job-wrapper .job-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="false"] .icon-inactive {
+            display: inline-block; }
+          .job-wrapper .job-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="false"] .icon-active {
+            display: none; }
+          .job-wrapper .job-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="true"] .icon-inactive {
+            display: none; }
+          .job-wrapper .job-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="true"] .icon-active {
+            display: inline-block; }
+        .job-wrapper .job-holder .body .accordion-holder .accordion-item:not(:last-child) {
+          margin-bottom: 32px; }
+  .job-wrapper .job-holder .footer {
     border-top: 1px solid lightgray; }
-    .job-wrapper .career-holder .footer .btn {
+    .job-wrapper .job-holder .footer .btn {
       padding: 36px 24px;
       font-weight: bold;
       border-radius: 0; }
-      .job-wrapper .career-holder .footer .btn svg {
+      .job-wrapper .job-holder .footer .btn svg {
         width: 33px;
         height: 33px; }
-  .job-wrapper .career-holder:not(:last-child) {
+  .job-wrapper .job-holder:not(:last-child) {
     margin-bottom: 60px; }
 
 /*# sourceMappingURL=jobsmanager.css.map */

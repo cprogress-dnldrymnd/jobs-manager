@@ -108,7 +108,7 @@ select {
 }
 
 .job-wrapper {
-    .career-holder {
+    .job-holder {
         box-shadow: 0px 29px 35px #0000000d;
         background-color: var(--jobm-white-color);
 
@@ -117,7 +117,13 @@ select {
             .job-title h3 {
                 font-size: 3rem;
             }
+            .location {
+                svg{
+                    margin-right: 16px;
+                }
+            }
             .accordion-holder {
+                margin-top: 2rem;
                 .accordion-item {
                     border: none;
                     background-color: transparent;
