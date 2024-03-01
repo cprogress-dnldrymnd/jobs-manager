@@ -2,6 +2,10 @@
 if (!class_exists('PostMeta')) {
     class PostMeta
     {
+        use Carbon_Fields\Container;
+        use Carbon_Fields\Complex_Container;
+        use Carbon_Fields\Field;
+
         function __construct()
         {
             add_action('admin_notices', array($this, 'jobsmanager_notice'));
