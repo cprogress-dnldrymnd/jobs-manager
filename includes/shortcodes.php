@@ -66,7 +66,7 @@ if (!class_exists('JobsShortcodes')) {
                     )
                 );
 
-                return '<a href="' . wp_get_attachment_url($application_pack) . '"> ' . $text . ' </a>';
+                return '<a href="' . wp_get_attachment_url($application_pack) . '" target="_blank"> ' . $text . ' </a>';
             } else {
                 return 'No application pack';
             }
