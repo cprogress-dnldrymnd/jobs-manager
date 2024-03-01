@@ -159,4 +159,5 @@ $Location->args = array(
     'query_var'    => true,
     'has_archive'  => true,
     'show_in_rest' => true,
+    'show_in_menu ' => 'jobsmanager';
 );
