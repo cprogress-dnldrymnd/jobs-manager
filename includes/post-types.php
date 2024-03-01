@@ -138,31 +138,25 @@ class Taxonomny
     }
 }
 
-function jobsmanager_register_post_type()
-{
-    $Jobs = new PostType();
-    $Jobs->name = 'Jobs';
-    $Jobs->singular_name = 'Job';
-    $Jobs->icon = 'dashicons-businessperson';
-    $Jobs->supports = array('title', 'revisions', 'editor');
-    $Jobs->exclude_from_search = true;
-    $Jobs->publicly_queryable = false;
-    $Jobs->show_in_admin_bar = false;
-    $Jobs->has_archive = false;
-    $Jobs->show_in_menu = 'jobsmanager';
+$Jobs = new PostType();
+$Jobs->name = 'Jobs';
+$Jobs->singular_name = 'Job';
+$Jobs->icon = 'dashicons-businessperson';
+$Jobs->supports = array('title', 'revisions', 'editor');
+$Jobs->exclude_from_search = true;
+$Jobs->publicly_queryable = false;
+$Jobs->show_in_admin_bar = false;
+$Jobs->has_archive = false;
+$Jobs->show_in_menu = 'jobsmanager';
 
-    $Location = new Taxonomny();
-    $Location->taxonomy = 'location';
-    $Location->post_type = 'jobs';
-    $Location->args = array(
-        'label'        => 'Location',
-        'rewrite'      => array('slug' => 'location-category'),
-        'hierarchical' => true,
-        'query_var'    => true,
-        'has_archive'  => true,
-        'show_in_rest' => true,
-    );
-}
-
-
-add_action('init', 'jobsmanager_register_post_type');
+$Location = new Taxonomny();
+$Location->taxonomy = 'location';
+$Location->post_type = 'jobs';
+$Location->args = array(
+    'label'        => 'Location',
+    'rewrite'      => array('slug' => 'location-category'),
+    'hierarchical' => true,
+    'query_var'    => true,
+    'has_archive'  => true,
+    'show_in_rest' => true,
+);
