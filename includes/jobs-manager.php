@@ -55,7 +55,6 @@ if (!class_exists('JobsManager')) {
             return $this->get__theme_option('jobs_disable_bootstrap');
         }
 
-
         function jobs_single()
         {
             return $this->get__theme_option('jobs_single');
