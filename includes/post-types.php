@@ -29,7 +29,9 @@ class PostType
             $show_in_admin_bar = true;
         }
 
-
+        if ($JobsManager->jobs_slug()) {
+            $rewrite =  array('slug' => 'location-category');
+        }
         register_post_type(
             strtolower($this->name),
             array(
@@ -55,7 +57,7 @@ class PostType
                 'public'              => true,
                 'has_archive'         => $this->has_archive,
                 'hierarchical'        => $this->hierarchical,
-                'rewrite'             => $this->rewrite,
+                'rewrite'             => $rewrite,
                 'menu_icon'           => $this->icon,
                 'capability_type'     => 'page',
                 'exclude_from_search' => $exclude_from_search,
