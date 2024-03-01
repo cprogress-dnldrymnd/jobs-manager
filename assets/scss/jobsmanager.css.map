@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mBAAqB;EACjB,WAAW,EAAE,KAAK;EAClB,cAAc,EAAE,KAAK",
+"sources": ["jobsmanager.scss"],
+"names": [],
+"file": "jobsmanager.css"
+}
