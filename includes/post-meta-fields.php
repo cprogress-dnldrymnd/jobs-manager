@@ -24,6 +24,7 @@ Container::make('theme_options', __('Settings'))
 Container::make('post_meta', __('Job Details'))
     ->where('post_type', '=', 'jobs')
     ->add_fields(array(
+        Field::make('textarea', 'short_description', 'Short Description'),
         Field::make('text', 'salary', 'Salary'),
         Field::make('complex', 'accordion', 'Accordion')
             ->add_fields(array(
