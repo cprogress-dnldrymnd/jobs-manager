@@ -144,7 +144,7 @@ function jobsmanager_register_post_type()
     $Jobs->name = 'Jobs';
     $Jobs->singular_name = 'Job';
     $Jobs->icon = 'dashicons-businessperson';
-    $Jobs->supports = array('title', 'revisions');
+    $Jobs->supports = array('title', 'revisions', 'editor');
     $Jobs->exclude_from_search = true;
     $Jobs->publicly_queryable = false;
     $Jobs->show_in_admin_bar = false;
