@@ -114,10 +114,21 @@ class Ajax
 								<?php } ?>
 							</div>
 							<div class="footer">
-								<div class="button-box text-right">
-									<button type="button" class="button accent-button apply-button" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
-										<span>APPLY FOR THIS POSITION</span><span class="arrow right white rotated"><span></span></span>
-									</button>
+								<div class="row">
+									<div class="col">
+										<div class="button-box">
+											<button type="button" class="btn btn-primary" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
+												<span>LEARN MORE</span>
+											</button>
+										</div>
+									</div>
+									<div class="col">
+										<div class="button-box">
+											<button type="button" class="btn btn-primary" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
+												<span>APPLY FOR THIS POSITION</span><span class="arrow right white rotated"><span></span></span>
+											</button>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
