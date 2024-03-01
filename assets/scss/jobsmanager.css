@@ -77,6 +77,8 @@ select.nice-select-js {
 .job-wrapper .career-holder {
   box-shadow: 0px 29px 35px #0000000D;
   background-color: var(--jobm-white-color); }
+  .job-wrapper .career-holder .accordion-button:after {
+    content: ''; }
   .job-wrapper .career-holder .btn {
     padding: 36px 24px;
     font-weight: bold;
