@@ -10,7 +10,7 @@ if (!class_exists('PostMeta')) {
         function jobsmanager_notice()
         {
             global $pagenow;
-            $admin_pages = ['index.php', 'edit.php', 'plugins.php'];
+            $admin_pages = ['index.php', 'edit.php?post_type=jobs', 'plugins.php'];
             if (in_array($pagenow, $admin_pages)) {
                 if (date('j, F') === '1, October') {
 ?>
