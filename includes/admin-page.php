@@ -43,7 +43,7 @@ class Admin_Page
     function jobsmanager_highlight_taxonomy_parent_menu($parent_file)
     {
         if (get_current_screen()->taxonomy == 'location') {
-            $parent_file = 'edit.php?post_type=jobs';
+            $parent_file = 'jobsmanager';
         }
 
         return $parent_file;
