@@ -6,6 +6,8 @@ if (!class_exists('JobsManager')) {
         {
             add_action('wp_enqueue_scripts', array($this, 'assets'));
             add_action('template_include', array($this, 'wpse_force_template'));
+            $template = WP_PLUGIN_DIR . '/' . plugin_basename(dirname(__FILE__)) . '/archive-jobs.php';
+            echo $template;
         }
 
         function assets()
