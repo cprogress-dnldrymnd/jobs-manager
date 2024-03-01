@@ -9,8 +9,18 @@ if (!class_exists('JobsManager')) {
 
         function assets()
         {
+            $JobsManager = new JobsManager;
+
+
             wp_enqueue_style('jobsmanager-style', plugin_dir_url(__FILE__) . 'jobsmanager.css');
             wp_enqueue_script('jobsmanager-style', plugin_dir_url(__FILE__) . 'jobsmanager.js');
+
+
+            if (!$JobsManager->disable_bootstrap()) {
+
+                wp_enqueue_style('jobsmanager-bootstrap', 'https: //cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+                wp_enqueue_script('jobsmanager-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
+            }
         }
 
 
