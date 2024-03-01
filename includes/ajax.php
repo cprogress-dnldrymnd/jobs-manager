@@ -10,7 +10,7 @@ class Ajax
 	{
 		$location = $_POST['location'];
 		$taxonomy = 'location';
-		$post_type = 'careers';
+		$post_type = 'jobs';
 		$offset = $_POST['offset'];
 		$posts_per_page = 5;
 
