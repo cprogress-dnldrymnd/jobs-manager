@@ -31,6 +31,8 @@ class PostType
 
         if ($JobsManager->jobs_slug()) {
             $rewrite =  array('slug' => $JobsManager->jobs_slug());
+        } else {
+            $rewrite = false
         }
         register_post_type(
             strtolower($this->name),
