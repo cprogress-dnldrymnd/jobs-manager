@@ -172,3 +172,9 @@ class Ct_Admin_Form
         return $html;
     }
 }
+function run_ct_wp_admin_form()
+{
+    $plugin = new Ct_Admin_Form();
+    $plugin->init();
+}
+run_ct_wp_admin_form();
