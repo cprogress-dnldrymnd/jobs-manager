@@ -29,6 +29,7 @@ Container::make('post_meta', __('Job Details'))
         Field::make('textarea', 'short_description', 'Short Description'),
         Field::make('text', 'salary', 'Salary'),
         Field::make('image', 'image', 'Image'),
+        Field::make('file', 'application_pack', 'Application Pack'),
     ))
     ->add_tab('Accordion', array(
         Field::make('complex', 'accordion', 'Accordion')
