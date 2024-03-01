@@ -17,7 +17,7 @@ function ajax_form() {
 
 
 function load_more_button_listener($) {
-    jQuery(document).on("click", '#load-more-careers', function (event) {
+    jQuery(document).on("click", '#load-more-jobs', function (event) {
         event.preventDefault();
         var offset = jQuery('.post-item').length;
         jobs_ajax(offset, 'append');
@@ -27,9 +27,9 @@ function load_more_button_listener($) {
 
 
 function jobs_ajax($offset, $event_type = 'html') {
-    var $loadmore = jQuery('#load-more-careers');
+    var $loadmore = jQuery('#load-more-jobs');
 
-    var $archive_section = jQuery('.careers-archive');
+    var $archive_section = jQuery('.jobs-archive');
 
     var $result_holder = jQuery('#results .results-holder');
 

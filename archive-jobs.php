@@ -24,7 +24,7 @@ $jobs_description = $JobsManager->jobs_description();
         </div>
     </section>
 
-    <section class="careers-archive background-light">
+    <section class="jobs-archive background-light">
         <div class="container container wide w-960">
             <div class="filter-wrapper text-end">
                 <select id="location" name="location" class="nice-select-js nice-select-style-1 nice-select-transparent">
@@ -49,7 +49,7 @@ $jobs_description = $JobsManager->jobs_description();
                 </div>
             </div>
             <div class="load-more text-center">
-                <a href="#" id="load-more-careers" class="d-none underline-link">
+                <a href="#" id="load-more-jobs" class="d-none underline-link">
                     <span>Load more</span>
                     <i class="fa-solid fa-spinner"></i>
                 </a>
@@ -65,7 +65,7 @@ $jobs_description = $JobsManager->jobs_description();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body contact-form-v2">
-                    <?= do_shortcode(carbon_get_theme_option('careers_contact_form')) ?>
+                    <?= do_shortcode(carbon_get_theme_option('jobs_contact_form')) ?>
                 </div>
             </div>
         </div>
