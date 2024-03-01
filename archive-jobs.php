@@ -9,17 +9,18 @@ $jobs_description = $JobsManager->jobs_description();
 
     <section class="jobs-title-section text-center">
         <div class="container">
-            <div class="heading-box">
-                <h1>
-                    <?= $jobs_alt_title ? $jobs_alt_title : 'Jobs' ?>
-                </h1>
-            </div>
-            <?php if ($jobs_description) { ?>
-                <div class="description-box">
-                    <?= wpautop($jobs_description) ?>
+            <div class="inner">
+                <div class="heading-box">
+                    <h1>
+                        <?= $jobs_alt_title ? $jobs_alt_title : 'Jobs' ?>
+                    </h1>
                 </div>
-            <?php } ?>
-
+                <?php if ($jobs_description) { ?>
+                    <div class="description-box">
+                        <?= wpautop($jobs_description) ?>
+                    </div>
+                <?php } ?>
+            </div>
         </div>
     </section>
 
