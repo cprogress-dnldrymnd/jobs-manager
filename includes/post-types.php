@@ -147,7 +147,7 @@ $Jobs->has_archive = false;
 
 $Location = new Taxonomny();
 $Location->taxonomy = 'location';
-$Location->post_type = 'Jobs';
+$Location->post_type = 'jobs';
 $Location->args = array(
     'label'        => 'Location',
     'rewrite'      => array('slug' => 'location-category'),
