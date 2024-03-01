@@ -1,5 +1,5 @@
 <?php
-if (!class_exists('JobsManager')) {
+if (!class_exists('PostMeta')) {
     class PostMeta
     {
         function __construct()
@@ -24,4 +24,4 @@ if (!class_exists('JobsManager')) {
     }
 }
 
-new JobsManager();
+new PostMeta();
