@@ -9,7 +9,7 @@ if (!class_exists('PostMeta')) {
 
         function jobsmanager_notice()
         {
-            if (function_exists('carbon_get_the_post_meta')) {
+            if (!function_exists('carbon_get_the_post_meta')) {
 
 ?>
                 <div class="notice notice-warning ">
