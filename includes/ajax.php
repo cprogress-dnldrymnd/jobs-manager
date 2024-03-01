@@ -145,7 +145,7 @@ class Ajax
 									<?php } ?>
 									<div class="col">
 										<div class="button-box">
-											<button type="button" class="btn btn-primary w-100 d-flex align-items-center" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
+											<button type="button" class="apply-button btn btn-primary w-100 d-flex align-items-center" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
 												<span class="col text-center">APPLY FOR THIS POSITION</span>
 												<span class="col-auto btn-icon">
 													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
