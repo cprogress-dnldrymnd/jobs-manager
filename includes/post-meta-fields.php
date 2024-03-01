@@ -11,6 +11,7 @@ use Carbon_Fields\Field;
 Container::make('theme_options', __('Settings'))
     ->set_page_parent('jobsmanager')
     ->add_tab('General Settings', array(
+        Field::make('checkbox', 'jobs_disable_bootstrap', __('Disable Bootstrap')),
         Field::make('checkbox', 'jobs_single', __('Enable Single Page')),
         Field::make('text', 'jobs_alt_title', __('Alt Title')),
         Field::make('textarea', 'jobs_description', __('Description')),
