@@ -6,6 +6,7 @@ if (!class_exists('JobsManager')) {
         {
             add_action('wp_enqueue_scripts', array($this, 'assets'));
             add_action('template_include', array($this, 'wpse_force_template'));
+
         }
 
         function assets()

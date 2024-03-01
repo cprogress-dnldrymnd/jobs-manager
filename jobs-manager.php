@@ -24,3 +24,5 @@ require plugin_dir_path(__FILE__) . 'includes/admin-page.php';
 require plugin_dir_path(__FILE__) . 'includes/post-meta.php';
 
 require plugin_dir_path(__FILE__) . 'includes/post-types.php';
+
+require plugin_dir_path(__FILE__) . 'includes/ajax.php';
