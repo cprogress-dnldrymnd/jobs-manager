@@ -13,17 +13,15 @@ class Admin_Page
         /**
          * Adds a submenu page under a custom post type parent.
          */
-        function books_register_ref_page()
-        {
-            add_submenu_page(
-                'jobsmanager',
-                __('Job Manager', 'jobsmanager'),
-                __('Job Manager', 'jobsmanager'),
-                'manage_options',
-                'job-manager-settings',
-                array($this, 'jobsmanager_setup_admin_page_init')
-            );
-        }
+
+        add_submenu_page(
+            'jobsmanager',
+            __('Job Manager', 'jobsmanager'),
+            __('Job Manager', 'jobsmanager'),
+            'manage_options',
+            'job-manager-settings',
+            array($this, 'jobsmanager_setup_admin_page_init')
+        );
     }
 
     function jobsmanager_setup_admin_page_init()
