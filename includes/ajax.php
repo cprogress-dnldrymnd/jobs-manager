@@ -128,7 +128,7 @@ class Ajax
 								<?php } ?>
 							</div>
 							<div class="footer">
-								<div class="row">
+								<div class="row jobs-buttons">
 									<?php if ($JobsManager->jobs_single()) { ?>
 										<div class="col">
 											<div class="button-box">
