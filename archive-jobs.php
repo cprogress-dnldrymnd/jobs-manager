@@ -6,7 +6,7 @@ $jobs_alt_title = $JobsManager->jobs_alt_title();
 $jobs_description = $JobsManager->jobs_description();
 ?>
 <?php do_action('jobs_before_main_content') ?>
-<main id="jobs-main">
+<main id="jobs-main" class="jobs-main-archive">
 
     <section class="jobs-title-section text-center">
         <div class="container">
