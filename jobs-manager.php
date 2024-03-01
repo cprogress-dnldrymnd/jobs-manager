@@ -26,9 +26,10 @@ if (!class_exists('JobsManager')) {
 
         function __construct()
         {
+            add_action('wp_enqueue_scripts', array($this, 'assets'));
             add_action('init', array($this, 'jobsmanager_setup_post_type'));
             add_action('init', array($this, 'jobsmanager_setup_taxonomy'));
-            add_action('wp_enqueue_scripts', array($this, 'assets'));
+            add_action('wp_enqueue_scripts', array($this, 'jobsmanager_setup_admin_page'));
         }
 
         function assets()
@@ -93,7 +94,6 @@ if (!class_exists('JobsManager')) {
         function jobsmanager_setup_taxonomy()
         {
 
-
             $labels = array(
                 'name'                       => _x('Locations', 'Location General Name', 'text_domain'),
                 'singular_name'              => _x('Location', 'Location Singular Name', 'text_domain'),
@@ -126,6 +126,16 @@ if (!class_exists('JobsManager')) {
                 'show_tagcloud'              => true,
             );
             register_taxonomy('location', array('jobs'), $args);
+        }
+
+        function jobsmanager_setup_admin_page()
+        {
+            add_menu_page('Test Plugin Page', 'Test Plugin', 'manage_options', 'test-plugin', 'test_init');
+        }
+
+        function test_init()
+        {
+            echo "<h1>Hello World!</h1>";
         }
     }
 }
