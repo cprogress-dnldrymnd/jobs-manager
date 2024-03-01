@@ -5,7 +5,7 @@ $terms = $JobsManager->get_terms_details('location');
 $jobs_alt_title = $JobsManager->jobs_alt_title();
 $jobs_description = $JobsManager->jobs_description();
 ?>
-<main id="main">
+<main id="jobs-main">
 
     <section class="jobs-title-section text-center">
         <div class="container">
