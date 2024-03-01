@@ -53,14 +53,14 @@ Container::make('post_meta', __('Job Details'))
             ))
             ->set_default_value(array(
                 array(
-                    'label' => 'Job Type',
+                    'meta_label' => 'Job Type',
                 ),
                 array(
-                    'label' => 'Location',
+                    'meta_label' => 'Location',
                 ),
                 array(
-                    'label' => 'Role',
+                    'meta_label' => 'Role',
                 ),
             ))
-            ->set_header_template('<%- accordion_title  %>')
+            ->set_header_template('<%- meta_label  %>')
     ));
