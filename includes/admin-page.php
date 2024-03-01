@@ -26,8 +26,8 @@ class Admin_Page
 
         add_submenu_page(
             'jobsmanager',
-            __('Job Manager', 'jobsmanager'),
-            __('Job Manager', 'jobsmanager'),
+            __('Job Locations', 'jobsmanager'),
+            __('Job Locations', 'jobsmanager'),
             'manage_categories',
             'edit-tags.php?taxonomy=location',
         );
