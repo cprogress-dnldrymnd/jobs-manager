@@ -13,7 +13,7 @@ Container::make('theme_options', __('Settings'))
     ->add_tab('General Settings', array(
         Field::make('checkbox', 'jobs_disable_bootstrap', __('Disable Bootstrap')),
         Field::make('checkbox', 'jobs_single', __('Enable Single Page')),
-        Field::make('text', 'jobs_permalink', __('Custom Archive Permalink'))->set_help_text('Defaults to jobs'),
+        Field::make('text', 'jobs_slug', __('Custom Archive Slug'))->set_help_text('Defaults to jobs'),
         Field::make('text', 'jobs_alt_title', __('Alt Title')),
         Field::make('textarea', 'jobs_description', __('Description')),
     ))
