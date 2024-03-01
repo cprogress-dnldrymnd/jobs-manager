@@ -198,4 +198,3 @@ $Testimonials->exclude_from_search = true;
 $Testimonials->publicly_queryable = false;
 $Testimonials->show_in_admin_bar = false;
 $Testimonials->has_archive = false;
-}
