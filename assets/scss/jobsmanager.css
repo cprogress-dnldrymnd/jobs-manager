@@ -83,6 +83,8 @@ select.nice-select-js {
       font-size: 3rem; }
     .job-wrapper .job-holder .body .location svg {
       margin-right: 16px; }
+    .job-wrapper .job-holder .body .description {
+      margin-top: 1rem; }
     .job-wrapper .job-holder .body .accordion-holder {
       margin-top: 2rem; }
       .job-wrapper .job-holder .body .accordion-holder .accordion-item {
@@ -112,7 +114,7 @@ select.nice-select-js {
           .job-wrapper .job-holder .body .accordion-holder .accordion-item .accordion-header .accordion-button[aria-expanded="true"] .icon-active {
             display: inline-block; }
         .job-wrapper .job-holder .body .accordion-holder .accordion-item:not(:last-child) {
-          margin-bottom: 32px; }
+          margin-bottom: 1rem; }
   .job-wrapper .job-holder .footer {
     border-top: 1px solid lightgray; }
     .job-wrapper .job-holder .footer .btn {
