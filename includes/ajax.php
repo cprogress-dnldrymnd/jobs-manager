@@ -130,7 +130,7 @@ class Ajax
 									<?php if ($JobsManager->jobs_single()) { ?>
 										<div class="col">
 											<div class="button-box">
-												<button type="button" class="btn btn-link" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
+												<button type="button" class="btn btn-link w-100" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
 													<span>LEARN MORE</span>
 												</button>
 											</div>
@@ -138,7 +138,7 @@ class Ajax
 									<?php } ?>
 									<div class="col">
 										<div class="button-box">
-											<button type="button" class="btn btn-primary" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
+											<button type="button" class="btn btn-primary w-100" data-title="<?php the_title() ?>" data-bs-toggle="modal" data-bs-target="#applyModal">
 												<span>APPLY FOR THIS POSITION</span><span class="arrow right white rotated"><span></span></span>
 											</button>
 										</div>
