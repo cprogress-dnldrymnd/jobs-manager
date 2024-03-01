@@ -116,6 +116,7 @@ select {
         .btn {
             padding: 36px 24px;
             font-weight: bold;
+            border-radius: 0;
         }
         &:not(:last-child) {
             margin-bottom: 60px;

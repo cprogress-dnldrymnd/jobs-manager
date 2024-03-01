@@ -79,7 +79,8 @@ select.nice-select-js {
   background-color: var(--jobm-white-color); }
   .job-wrapper .career-holder .btn {
     padding: 36px 24px;
-    font-weight: bold; }
+    font-weight: bold;
+    border-radius: 0; }
   .job-wrapper .career-holder:not(:last-child) {
     margin-bottom: 60px; }
 
