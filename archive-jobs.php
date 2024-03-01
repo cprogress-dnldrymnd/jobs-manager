@@ -16,7 +16,7 @@ $jobs_description = $JobsManager->jobs_description();
             </div>
             <?php if ($jobs_description) { ?>
                 <div class="description-box">
-                    <?= wpautop($jobs_alt_title) ?>
+                    <?= wpautop($jobs_description) ?>
                 </div>
             <?php } ?>
 
@@ -25,27 +25,22 @@ $jobs_description = $JobsManager->jobs_description();
 
     <section class="careers-archive background-light">
         <div class="container container wide w-960">
-            <div class="filter-wrapper justify-space-between align--center">
-                <div class="inner">
-                    <h2 class="m-0">Open positions</h2>
-                </div>
-                <div class="inner">
-                    <select id="location" name="location" class="nice-select-js nice-select-style-1 nice-select-transparent">
-                        <option value=""> All Locations </option>
-                        <?php if ($terms) { ?>
-                            <?php foreach ($terms as $key => $term) { ?>
-                                <?php
-                                if ($main_query->term_id == $key) {
-                                    $selected = 'selected';
-                                } else {
-                                    $selected = '';
-                                }
-                                ?>
-                                <option <?= $selected ?> value="<?= $key ?>"> <?= $term['name'] ?> </option>
-                            <?php } ?>
+            <div class="filter-wrapper text-end">
+                <select id="location" name="location" class="nice-select-js nice-select-style-1 nice-select-transparent">
+                    <option value=""> All Locations </option>
+                    <?php if ($terms) { ?>
+                        <?php foreach ($terms as $key => $term) { ?>
+                            <?php
+                            if ($main_query->term_id == $key) {
+                                $selected = 'selected';
+                            } else {
+                                $selected = '';
+                            }
+                            ?>
+                            <option <?= $selected ?> value="<?= $key ?>"> <?= $term['name'] ?> </option>
                         <?php } ?>
-                    </select>
-                </div>
+                    <?php } ?>
+                </select>
             </div>
             <div id="results">
                 <div class="results-holder">
