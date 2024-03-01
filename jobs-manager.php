@@ -86,7 +86,7 @@ if (!class_exists('JobsManager')) {
                 'publicly_queryable'    => true,
                 'capability_type'       => 'page',
             );
-            register_post_type('post_type', $args);
+            register_post_type('jobs', $args);
         }
 
         function jobsmanager_setup_taxonomy()
