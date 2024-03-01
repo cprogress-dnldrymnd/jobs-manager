@@ -130,10 +130,10 @@ if (!class_exists('JobsManager')) {
 
         function jobsmanager_setup_admin_page()
         {
-            add_menu_page('Test Plugin Page', 'Test Plugin', 'manage_options', 'test-plugin', 'test_init');
+            add_menu_page('Test Plugin Page', 'Test Plugin', 'manage_options', 'test-plugin', $this->jobsmanager_setup_admin_page_init());
         }
 
-        function test_init()
+        function jobsmanager_setup_admin_page_init()
         {
             echo "<h1>Hello World!</h1>";
         }
