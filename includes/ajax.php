@@ -62,7 +62,7 @@ class Ajax
 											<h3><?php the_title() ?></h3>
 										</div>
 									</div>
-									<div class="col-auto justify-content-between">
+									<div class="col-auto ">
 										<span class="salary">£ <?= $salary ?></span>
 									</div>
 									<div class="col-auto">
