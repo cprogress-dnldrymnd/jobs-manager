@@ -10,6 +10,7 @@ if (!class_exists('JobsShortcodes')) {
 
         function jobs_manager_modal_form()
         {
+            $JobsManager = new JobsManager;
             ob_start();
 ?>
             <div class="modal right fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
@@ -20,13 +21,7 @@ if (!class_exists('JobsShortcodes')) {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body contact-form-v2">
-                            <?php
-                            if ($this->jobs_contact_form()) {
-                                echo do_shortcode($this->jobs_contact_form());
-                            } else {
-                                echo '<h2> Contact Form Shortcode Error </h2>';
-                            }
-                            ?>
+                           xxxxxxxxxxxx
                         </div>
                     </div>
                 </div>
