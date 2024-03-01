@@ -102,8 +102,8 @@ select {
 }
 
 .filter-wrapper {
-    padding-bottom: 50px;
-    margin-bottom: 50px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
     border-bottom: 1px solid var(--jobm-border-color);
 }
 
@@ -121,18 +121,18 @@ select {
             }
             &[aria-expanded="false"] {
                 .icon-inactive {
-                    display: none;
+                    display: inline-block;
                 }
                 .icon-active {
-                    display: inline-block;
+                    display: none;
                 }
             }
             &[aria-expanded="true"] {
                 .icon-inactive {
-                    display: inline-block;
+                    display: none;
                 }
                 .icon-active {
-                    display: none;
+                    display: inline-block;
                 }
             }
         }
