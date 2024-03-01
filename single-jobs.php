@@ -71,7 +71,7 @@ while (have_posts()) {
                         <?php if ($application_pack) { ?>
                             <div class="col">
                                 <div class="button-box">
-                                    <a type="button" class="btn btn-link w-100 d-flex align-items-center" href="<?php the_permalink() ?>">
+                                    <a type="button" class="btn btn-link w-100 d-flex align-items-center" href="<?= wp_get_attachment_url($application_pack) ?>">
                                         <span class="col text-center">DOWNLOAD APPLICATION PACK</span>
                                         <span class="col-auto btn-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="33.638" height="30" viewBox="0 0 33.638 30">
