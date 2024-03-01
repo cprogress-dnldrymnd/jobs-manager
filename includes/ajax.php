@@ -51,14 +51,14 @@ class Ajax
 					$the_query->the_post(); ?>
 					<?php
 					$postterms = get_the_terms(get_the_ID(), 'location');
-					$salary = carbon_get_the_post_meta('salary');
-					$accordion = carbon_get_the_post_meta('accordion');
+					$salary = $JobsManager->get__post_meta('salary');
+					$accordion = $JobsManager->get__post_meta('accordion');
 					?>
 
 					<div class="career-holder background-white post-item">
 						<div class="inner">
 							<div class="body">
-								<div class="row">
+								<div class="row align-items-center">
 									<div class="col-auto">
 										<div class="job-title">
 											<h3><?php the_title() ?></h3>
