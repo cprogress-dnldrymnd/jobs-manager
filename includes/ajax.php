@@ -67,23 +67,21 @@ class Ajax
 									<div class="col-auto ">
 										<span class="salary">£ <?= $salary ?></span>
 									</div>
-									<div class="col-auto">
-										<div class="location d-flex align-items-center">
-											<svg xmlns="http://www.w3.org/2000/svg" width="10.908" height="15.583" viewBox="0 0 10.908 15.583">
-												<path id="Icon_material-location-on" data-name="Icon material-location-on" d="M12.954,3A5.45,5.45,0,0,0,7.5,8.454c0,4.091,5.454,10.129,5.454,10.129s5.454-6.038,5.454-10.129A5.45,5.45,0,0,0,12.954,3Zm0,7.4A1.948,1.948,0,1,1,14.9,8.454,1.949,1.949,0,0,1,12.954,10.4Z" transform="translate(-7.5 -3)" fill="currentColor" />
-											</svg>
-											<span>
-												<?php foreach ($postterms as $postterm) { ?>
-													<span><?= $postterm->name ?></span>
-												<?php } ?>
-											</span>
+									<?php if ($postterms) { ?>
+										<div class="col-auto">
+											<div class="location d-flex align-items-center">
+												<svg xmlns="http://www.w3.org/2000/svg" width="10.908" height="15.583" viewBox="0 0 10.908 15.583">
+													<path id="Icon_material-location-on" data-name="Icon material-location-on" d="M12.954,3A5.45,5.45,0,0,0,7.5,8.454c0,4.091,5.454,10.129,5.454,10.129s5.454-6.038,5.454-10.129A5.45,5.45,0,0,0,12.954,3Zm0,7.4A1.948,1.948,0,1,1,14.9,8.454,1.949,1.949,0,0,1,12.954,10.4Z" transform="translate(-7.5 -3)" fill="currentColor" />
+												</svg>
+												<span>
+													<?php foreach ($postterms as $postterm) { ?>
+														<span><?= $postterm->name ?></span>
+													<?php } ?>
+												</span>
+											</div>
 										</div>
-									</div>
+									<?php } ?>
 								</div>
-
-
-
-
 								<div class="description d-none d-sm-block">
 									<?php the_content() ?>
 								</div>
