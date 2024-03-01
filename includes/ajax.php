@@ -37,7 +37,7 @@ class Ajax
 
 		$count = $the_query->found_posts;
 
-		echo hide_load_more($count, $offset, $posts_per_page);
+		echo $this->hide_load_more($count, $offset, $posts_per_page);
 
 		if ($the_query->have_posts()) {
 ?>
