@@ -5,7 +5,7 @@ if (!class_exists('JobsShortcodes')) {
         function __construct()
         {
             add_shortcode('jobs_manager_modal_form', array($this, 'jobs_manager_modal_form'));
-            add_shortcode('jobm_form_link', array($this, 'jobs_manager_modal_form'));
+            add_shortcode('jobm_form_link', array($this, 'jobm_form_link'));
             add_shortcode('jobm_application_pack_link', array($this, 'jobm_application_pack_link'));
         }
 
