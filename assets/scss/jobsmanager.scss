@@ -117,6 +117,10 @@ select {
             padding: 36px 24px;
             font-weight: bold;
             border-radius: 0;
+            svg {
+                width: 33px;
+                height: 33px;
+            }
         }
         &:not(:last-child) {
             margin-bottom: 60px;
