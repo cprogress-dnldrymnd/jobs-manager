@@ -112,6 +112,11 @@ select {
     .career-holder {
         box-shadow: 0px 29px 35px #0000000D;
         background-color: var(--jobm-white-color);
+
+        .btn {
+            padding: 36px 24px;
+            font-weight: bold;
+        }
         &:not(:last-child) {
             margin-bottom: 60px;
         }
