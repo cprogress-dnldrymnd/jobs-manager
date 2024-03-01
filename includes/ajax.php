@@ -83,7 +83,7 @@ class Ajax
 									<?php } ?>
 								</div>
 								<div class="description d-none d-sm-block">
-									<?php the_content() ?>
+									<?= wpautop($JobsManager->get__post_meta('short_description')) ?>
 								</div>
 								<?php if ($accordion) { ?>
 									<div class="accordion-holder accordion-style-1">
@@ -98,7 +98,7 @@ class Ajax
 												</h2>
 												<div id="collapse<?= get_the_ID() . '-description'  ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= get_the_ID() . '-description'  ?>" data-bs-parent="#accordion-<?= get_the_ID() ?>">
 													<div class="accordion-body">
-														<?php the_content() ?>
+														<?= wpautop($JobsManager->get__post_meta('short_description')) ?>
 													</div>
 												</div>
 											</div>
