@@ -174,15 +174,7 @@ if (!class_exists('JobsManager')) {
         function jobsmanager_setup_post_type()
         {
 
-            $Testimonials = new newPostType();
-            $Testimonials->name = 'Testimonials';
-            $Testimonials->singular_name = 'Testimonial';
-            $Testimonials->icon = 'dashicons-testimonial';
-            $Testimonials->supports = array('title', 'revisions');
-            $Testimonials->exclude_from_search = true;
-            $Testimonials->publicly_queryable = false;
-            $Testimonials->show_in_admin_bar = false;
-            $Testimonials->has_archive = false;
+
         }
     }
 }
