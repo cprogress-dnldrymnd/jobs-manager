@@ -34,7 +34,7 @@ if (!class_exists('JobsManager')) {
         function wpse_force_template($template)
         {
             // If the current url is an archive of any kind
-            if (is_archive('jobs')) {
+            if (is_post_type_archive('jobs')) {
                 // Set this to the template file inside your plugin folder
                 $template = WP_PLUGIN_DIR . '/jobs-manager/archive-jobs.php';
             } else if (is_single() && get_post_type() == 'jobs') {
