@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
     nice_select();
-    ajax_form();
+    ajax_form_jobs();
     load_more_button_listener();
     job_archive();
 });
@@ -35,7 +35,7 @@ function nice_select() {
     jQuery('select.nice-select-js').niceSelect();
 }
 
-function ajax_form() {
+function ajax_form_jobs() {
     jQuery("#location").change(function (e) {
         e.preventDefault();
         jobs_ajax(0);

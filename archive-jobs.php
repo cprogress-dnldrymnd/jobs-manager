@@ -66,3 +66,8 @@ $jobs_description = $JobsManager->jobs_description();
 <?php
 get_footer();
 ?>
+<script>
+	jQuery(document).ready(function() {
+		jobs_ajax(0);
+	});
+</script>
